@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Tải Cấu Hình DNS & Kích Hoạt Locket Gold VIP (2099)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
+                    colors: {
+                        accent: '#f59e0b',
+                        'accent-dark': '#d97706',
+                        'accent-light': '#fbbf24',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .text-gradient {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.45); }
+            50% { box-shadow: 0 0 45px rgba(245, 158, 11, 0.8); }
+        }
+        .pulse-btn { animation: pulseGlow 2.2s infinite; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-amber-400 selection:text-slate-950">
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 font-black text-lg shadow-sm">💛</div>
+                <div>
+                    <span class="font-extrabold text-slate-900 text-lg tracking-tight">Locket <span class="text-amber-500">Gold VIP</span></span>
+                    <span class="ml-1.5 text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 border border-emerald-500/30">PRO 2099</span>
+                </div>
+            </a>
+            <div class="flex items-center gap-2">
+                <span id="serverStatusPill" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span id="serverIpLabel">Đang kết nối...</span>
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 py-8 sm:py-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+            <!-- Hero Title -->
+            <div class="text-center mb-8">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-700 text-xs font-black uppercase tracking-wider mb-3">
+                    ⚡ DÀNH CHO IPHONE & IPAD (FULL IOS 14 — 19+ • ĐÃ XÁC MINH CMS)
+                </span>
+                <h1 class="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">
+                    Tải Cấu Hình DNS & Kích Hoạt <span class="text-gradient">Locket Gold Vĩnh Viễn</span>
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto mt-2 leading-relaxed">
+                    Hệ thống tự động giải mã chính xác Firebase UID 28 ký tự và tạo hồ sơ <code>.mobileconfig</code> trực tiếp từ Server riêng của bạn (hạn 2099).
+                </p>
+            </div>
+
+            <!-- PRIMARY ACTIVATION & DOWNLOAD CARD -->
+            <div class="bg-gradient-to-br from-amber-500 via-amber-400 to-amber-500 rounded-3xl p-6 sm:p-8 shadow-xl border border-amber-300 text-slate-950 mb-8 relative overflow-hidden">
+                <div class="absolute -right-8 -bottom-8 w-48 h-48 bg-white/15 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
+                    <div class="text-center sm:text-left">
+                        <span class="text-[11px] font-black uppercase tracking-widest bg-slate-950 text-amber-400 px-3 py-1 rounded-full shadow-sm inline-block mb-2">
+                            BƯỚC 1: XÁC THỰC UID & TẢI HỒ SƠ ĐÃ KÝ XANH
+                        </span>
+                        <h2 class="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
+                            Hồ Sơ Cấu Hình DNS Gold (.mobileconfig)
+                        </h2>
+                        <p class="text-xs sm:text-sm font-semibold text-slate-900/85 mt-1 max-w-md">
+                            Nhập link Locket hoặc <code>@username</code> bên dưới để tải cấu hình trực tiếp từ server của bạn.
+                        </p>
+                    </div>
+
+                    <!-- NÚT TẢI KHI ĐÃ XÁC THỰC -->
+                    <div id="unlockedDownloadContainer" class="hidden flex flex-col gap-2 w-full sm:w-auto shrink-0">
+                        <a href="#" id="mainDnsDownloadBtn" onclick="downloadActiveDnsProfile(event)" class="pulse-btn flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-slate-950 hover:bg-slate-900 text-amber-400 font-extrabold text-sm shadow-xl transition-all cursor-pointer">
+                            <svg class="w-5 h-5 text-amber-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            <span id="mainDnsBtnText">📥 TẢI CẤU HÌNH DNS NGAY (2099)</span>
+                        </a>
+                        <button onclick="copyDnsUrl(this)" class="flex items-center justify-center gap-1 px-3 py-2 rounded-xl bg-white/85 hover:bg-white text-slate-900 font-bold text-xs shadow-sm transition-all border border-amber-300 cursor-pointer">
+                            <span id="copyBtnTxt">📋 Copy Link Tải Hồ Sơ</span>
+                        </button>
+                    </div>
+
+                    <!-- TRẠNG THÁI CHỜ -->
+                    <div id="lockedDownloadBadge" class="flex flex-col items-center sm:items-end gap-1.5 w-full sm:w-auto shrink-0">
+                        <div class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-slate-950/90 text-amber-300 font-bold text-xs sm:text-sm shadow-md border border-slate-900">
+                            <span>🔓 Chọn Tài Khoản Hoặc Nhập Username</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QUICK SELECT ACCOUNTS -->
+                <div id="quickSelectUsersBar" class="mt-5 flex flex-wrap items-center gap-2 relative z-10">
+                    <span class="text-xs font-extrabold text-slate-900">⚡ Chọn nhanh:</span>
+                    <button type="button" onclick="quickActivate('hippobbie')" class="px-3.5 py-1.5 rounded-xl bg-slate-950 text-amber-300 hover:bg-slate-800 text-xs font-extrabold shadow-sm transition-all cursor-pointer">
+                        👤 @hippobbie
+                    </button>
+                </div>
+
+                <!-- Ô DÁN LINK LOCKET TẠO DNS CÁ NHÂN HÓA -->
+                <div class="mt-4 pt-4 border-t border-amber-600/20 relative z-10">
+                    <div class="bg-white/95 backdrop-blur-xs p-4 sm:p-5 rounded-2xl border border-amber-400/80 shadow-sm">
+                        <div class="flex items-center justify-between mb-2">
+                            <label for="locketInput" class="text-xs sm:text-sm font-black text-slate-950 flex items-center gap-1.5">
+                                <span>🔗</span>
+                                <span>Dán Link Locket hoặc Username để xác thực UID & lấy nút tải:</span>
+                            </label>
+                            <span class="text-[10px] font-bold text-amber-900 bg-amber-400/30 px-2 py-0.5 rounded-md">100% Server Riêng</span>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-2">
+                            <div class="relative flex-1">
+                                <input type="text" id="locketInput" placeholder="Dán link https://locket.cam/hippobbie hoặc nhập @username"
+                                       onkeydown="if(event.key==='Enter') generateDnsForUser()"
+                                       class="w-full pl-4 pr-10 py-3 rounded-xl bg-white border border-amber-300 text-slate-950 text-xs sm:text-sm font-semibold placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 shadow-inner">
+                                <button type="button" onclick="pasteFromClipboard()" title="Dán từ bộ nhớ tạm" class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-700 p-1">
+                                    📋
+                                </button>
+                            </div>
+                            <button type="button" onclick="generateDnsForUser()" id="btnGenDns"
+                                    class="px-6 py-3 rounded-xl bg-slate-950 hover:bg-slate-900 text-amber-400 font-extrabold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer shrink-0 active:scale-95">
+                                <span id="btnGenDnsText">⚡ Kiểm Tra & Kích Hoạt VIP</span>
+                            </button>
+                        </div>
+
+                        <!-- USER PROFILE & DOWNLOAD RESULT BOX -->
+                        <div id="genStatusBox" class="hidden mt-3 p-4 rounded-xl text-xs transition-all"></div>
+                    </div>
+                </div>
+
+                <!-- Safari Warning Box -->
+                <div class="mt-4 text-xs text-slate-900 font-semibold flex items-start gap-2.5 bg-white/45 p-3.5 rounded-xl relative z-10">
+                    <span>💡</span>
+                    <span><strong>Lưu ý:</strong> Tải trực tiếp bằng trình duyệt <strong>Safari</strong> trên iPhone để iOS tự động hiển thị thông báo <em>"Đã tải về hồ sơ"</em>.</span>
+                </div>
+            </div>
+
+            <!-- WEB VIDEO UPLOADER CARD (BYPASS 10S & 15MB HARDCODE) -->
+            <div class="bg-slate-950 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-amber-500/40 mb-8 relative overflow-hidden">
+                <div class="absolute -top-12 -right-12 w-56 h-56 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-slate-800 relative z-10">
+                    <div>
+                        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-[11px] font-black uppercase tracking-wider mb-2">
+                            🎬 BYPASS GIỚI HẠN 10 GIÂY & 15MB TRÊN APP STORE
+                        </div>
+                        <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight">
+                            Đăng Video Dài 90s & Không Giới Hạn MB Lên Locket
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-400 mt-1">
+                            Đẩy thẳng video từ Thư viện iPhone lên máy chủ <code>gs://locket-video</code> & <code>postMomentV2</code> (bỏ qua lệnh chặn <code>0xF00000</code> 15MB trong app gốc).
+                        </p>
+                    </div>
+                    <div id="uploaderUserBadge" class="hidden items-center gap-2.5 bg-slate-900/90 border border-emerald-500/40 px-3.5 py-2 rounded-2xl shrink-0">
+                        <img id="uploaderAvatar" src="" class="w-9 h-9 rounded-full object-cover border border-amber-400" alt="avatar">
+                        <div class="text-left">
+                            <div id="uploaderName" class="text-xs font-extrabold text-white">User</div>
+                            <div class="text-[10px] text-emerald-400 font-bold">● Đã kết nối Locket API</div>
+                        </div>
+                        <button type="button" onclick="logoutLocketUploader()" class="ml-2 px-2 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-[10px] font-bold cursor-pointer">
+                            Thoát
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP A: LOGIN TO LOCKET ACCOUNT (SHOWN WHEN NOT LOGGED IN) -->
+                <div id="uploaderLoginSection" class="mt-5 bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-5 relative z-10">
+                    <div class="flex items-center justify-between mb-3">
+                        <h3 class="text-sm font-extrabold text-amber-400 flex items-center gap-2">
+                            <span>🔐</span>
+                            <span>Bước 1: Đăng nhập tài khoản Locket (Lưu tự động cho các lần sau)</span>
+                        </h3>
+                        <button type="button" onclick="toggleTokenLoginMode()" class="text-[11px] font-bold text-slate-400 hover:text-amber-300 underline cursor-pointer">
+                            Đăng nhập bằng Refresh Token
+                        </button>
+                    </div>
+
+                    <!-- Standard Email / Phone + Password Login -->
+                    <div id="standardLoginInputs" class="grid grid-cols-1 sm:grid-cols-12 gap-3">
+                        <div class="sm:col-span-5">
+                            <label class="block text-[11px] font-bold text-slate-400 mb-1">Email hoặc Số điện thoại Locket</label>
+                            <input type="text" id="locketLoginId" placeholder="VD: email@gmail.com hoặc 0912345678"
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs sm:text-sm font-semibold focus:outline-none focus:border-amber-400">
+                        </div>
+                        <div class="sm:col-span-4">
+                            <label class="block text-[11px] font-bold text-slate-400 mb-1">Mật khẩu Locket</label>
+                            <input type="password" id="locketLoginPass" placeholder="Nhập mật khẩu Locket..."
+                                   onkeydown="if(event.key==='Enter') loginLocketForUpload()"
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs sm:text-sm font-semibold focus:outline-none focus:border-amber-400">
+                        </div>
+                        <div class="sm:col-span-3 flex items-end">
+                            <button type="button" onclick="loginLocketForUpload()" id="btnLocketLogin"
+                                    class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-xs sm:text-sm shadow-lg transition-all cursor-pointer">
+                                🔓 Kết Nối Tài Khoản
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Optional Refresh Token Login -->
+                    <div id="tokenLoginInputs" class="hidden mt-3 pt-3 border-t border-slate-800">
+                        <label class="block text-[11px] font-bold text-slate-400 mb-1">Dán Firebase Refresh Token hoặc ID Token (nếu đăng nhập bằng Apple ID / Không mật khẩu)</label>
+                        <div class="flex flex-col sm:flex-row gap-2">
+                            <input type="text" id="locketRefreshTokenInput" placeholder="Dán refresh_token (AEu4IL...) hoặc idToken (eyJhbG...)..."
+                                   class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-950 border border-slate-700 text-white text-xs font-mono focus:outline-none focus:border-amber-400">
+                            <button type="button" onclick="loginLocketWithToken()"
+                                    class="px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-950 font-black text-xs cursor-pointer shrink-0">
+                                Xác Thực Token
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="loginStatusMsg" class="hidden mt-3 p-3 rounded-xl text-xs font-semibold"></div>
+                </div>
+
+                <!-- STEP B: PICK VIDEO/PHOTO + CAPTION + UPLOAD -->
+                <div class="mt-5 grid grid-cols-1 md:grid-cols-12 gap-6 items-start relative z-10">
+                    <!-- Left: Locket Square Live Preview -->
+                    <div class="md:col-span-5 flex flex-col items-center">
+                        <div onclick="document.getElementById('momentFileInput').click()"
+                             class="w-full max-w-[290px] aspect-square rounded-[38px] bg-slate-900 border-2 border-dashed border-amber-400/50 hover:border-amber-400 overflow-hidden relative flex flex-col items-center justify-center cursor-pointer shadow-2xl group transition-all">
+                            <video id="momentPreviewVideo" playsinline webkit-playsinline muted loop controls class="hidden w-full h-full object-cover"></video>
+                            <img id="momentPreviewImg" class="hidden w-full h-full object-cover" alt="preview">
+
+                            <div id="momentEmptyPlaceholder" class="text-center p-6">
+                                <div class="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-400/30 flex items-center justify-center text-2xl mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                    📹
+                                </div>
+                                <div class="text-sm font-extrabold text-white">Bấm để chọn Video / Ảnh</div>
+                                <div class="text-[11px] text-amber-300 font-semibold mt-1">Hỗ trợ Video &gt; 10s (30s–90s+)</div>
+                                <div class="text-[10px] text-slate-400 mt-0.5">Không giới hạn dung lượng 15MB</div>
+                            </div>
+
+                            <!-- Live Caption Pill Overlay inside Preview -->
+                            <div id="liveCaptionPreviewWrap" class="hidden absolute bottom-4 inset-x-3 flex justify-center pointer-events-none">
+                                <div id="liveCaptionPill" class="px-4 py-2 rounded-2xl text-xs font-extrabold shadow-lg backdrop-blur-md max-w-full truncate bg-black/60 text-white">
+                                    Caption
+                                </div>
+                            </div>
+
+                            <!-- Preview Mute/Unmute Toggle Button -->
+                            <button type="button" id="btnTogglePreviewMute" onclick="event.stopPropagation(); togglePreviewVideoAudio()"
+                                    class="hidden absolute top-3 right-3 px-2.5 py-1.5 rounded-full bg-black/70 hover:bg-black/90 border border-white/20 text-white text-[11px] font-bold shadow-lg backdrop-blur-md z-20 cursor-pointer">
+                                🔇 Bấm bật tiếng
+                            </button>
+                        </div>
+
+                        <div id="mediaInfoBadge" class="hidden mt-3 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-bold text-center"></div>
+                        <div id="audioStatusBadge" class="hidden mt-1.5 px-3.5 py-1.5 rounded-xl bg-amber-500/15 border border-amber-400/30 text-amber-200 text-[11px] font-semibold text-center"></div>
+                    </div>
+
+                    <!-- Right: Controls & Upload Button -->
+                    <div class="md:col-span-7 space-y-4">
+                        <input type="file" id="momentFileInput" accept="video/*,image/*" class="hidden" onchange="handleMomentFileSelected(event)">
+
+                        <div class="flex flex-wrap gap-2">
+                            <button type="button" onclick="document.getElementById('momentFileInput').click()"
+                                    class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 font-extrabold text-xs border border-slate-700 cursor-pointer">
+                                📂 Chọn Video / Ảnh Từ Thư Viện iPhone
+                            </button>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-[11px] text-slate-300 font-semibold">
+                                ✅ Đã tắt kiểm tra 10s &amp; 15MB
+                            </span>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-extrabold text-slate-300 mb-1.5">💬 Nhập Caption hiển thị trên Locket (Tùy chọn):</label>
+                            <input type="text" id="momentCaptionInput" placeholder="Nhập caption của bạn..."
+                                   oninput="updateLiveCaptionPreview()"
+                                   class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white text-xs sm:text-sm font-semibold placeholder:text-slate-500 focus:outline-none focus:border-amber-400">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-extrabold text-slate-300 mb-1.5">🎨 Chọn Khung Màu Caption Locket Gold VIP:</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="captionStyleGrid">
+                                <button type="button" onclick="selectCaptionStyle('gold_crown')" data-style="gold_crown"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-extrabold bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 ring-2 ring-white cursor-pointer">
+                                    👑 Gold VIP
+                                </button>
+                                <button type="button" onclick="selectCaptionStyle('standard')" data-style="standard"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-white border border-slate-700 opacity-75 hover:opacity-100 cursor-pointer">
+                                    💬 Mặc định
+                                </button>
+                                <button type="button" onclick="selectCaptionStyle('heart_pink')" data-style="heart_pink"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-pink-500 to-rose-400 text-white opacity-75 hover:opacity-100 cursor-pointer">
+                                    💖 Hồng Tình Yêu
+                                </button>
+                                <button type="button" onclick="selectCaptionStyle('fire_gold')" data-style="fire_gold"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-red-500 to-orange-500 text-white opacity-75 hover:opacity-100 cursor-pointer">
+                                    🔥 Đỏ Rực Lửa
+                                </button>
+                                <button type="button" onclick="selectCaptionStyle('galaxy_purple')" data-style="galaxy_purple"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-600 to-fuchsia-500 text-white opacity-75 hover:opacity-100 cursor-pointer">
+                                    ✨ Tím Galaxy
+                                </button>
+                                <button type="button" onclick="selectCaptionStyle('ocean_blue')" data-style="ocean_blue"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-bold bg-gradient-to-r from-cyan-500 to-blue-600 text-white opacity-75 hover:opacity-100 cursor-pointer">
+                                    🌊 Xanh Đại Dương
+                                </button>
+                                <button type="button" onclick="selectCaptionStyle('dark_luxury')" data-style="dark_luxury"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-900 text-amber-400 border border-amber-500/40 opacity-75 hover:opacity-100 cursor-pointer">
+                                    💎 Đen Kim Cương
+                                </button>
+                                <button type="button" onclick="selectCaptionStyle('time')" data-style="time"
+                                        class="style-btn px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-emerald-300 border border-slate-700 opacity-75 hover:opacity-100 cursor-pointer">
+                                    🕒 Giờ Hiện Tại
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div id="uploadProgressWrap" class="hidden space-y-1.5">
+                            <div class="flex justify-between text-xs font-bold">
+                                <span id="uploadProgressLabel" class="text-amber-300">Đang tải video lên máy chủ Locket...</span>
+                                <span id="uploadProgressPct" class="text-white">0%</span>
+                            </div>
+                            <div class="w-full h-3 rounded-full bg-slate-800 overflow-hidden p-0.5">
+                                <div id="uploadProgressBar" class="h-full rounded-full bg-gradient-to-r from-amber-400 to-emerald-400 transition-all duration-200" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div id="uploadResultBox" class="hidden p-3.5 rounded-xl text-xs font-bold"></div>
+
+                        <button type="button" onclick="uploadAndPostMoment()" id="btnPostMoment"
+                                class="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-black text-sm sm:text-base shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98">
+                            <span>🚀 ĐĂNG VIDEO / ẢNH LÊN LOCKET NGAY (KHÔNG GIỚI HẠN)</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACTIVATED USERS LIST CARD -->
+            <div class="bg-white rounded-3xl p-6 sm:p-7 shadow-sm border border-slate-200/80 mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">👑 Danh Sách Tài Khoản Đã Kích Hoạt Gold</h3>
+                        <p class="text-xs text-slate-500">Bấm nút tải để nhận file <code>.mobileconfig</code> trực tiếp từ server của bạn (Vĩnh viễn 2099).</p>
+                    </div>
+                </div>
+                <div id="activatedUsersList" class="grid grid-cols-1 gap-3">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- VIDEO GUIDE CARD WITH PICTURE-IN-PICTURE -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80 mb-8">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center font-bold">
+                            ▶️
+                        </div>
+                        <div>
+                            <h3 class="text-base sm:text-lg font-extrabold text-slate-900">Video Clip Hướng Dẫn Chi Tiết (1 Phút)</h3>
+                            <p class="text-xs text-slate-500">Hỗ trợ chế độ Xem Thu Nhỏ (PiP) để vừa xem vừa cài đặt trên iPhone.</p>
+                        </div>
+                    </div>
+                    <button type="button" onclick="togglePipVideo()" class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-950 font-extrabold text-xs shadow-sm transition-all cursor-pointer">
+                        📺 Bật Video Thu Nhỏ (PiP)
+                    </button>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden bg-black aspect-video max-h-[400px] mx-auto shadow-inner border border-slate-800 flex items-center justify-center">
+                    <video id="guideVideoPlayer" controls playsinline webkit-playsinline preload="metadata" class="w-full h-full object-contain" src="https://pub-df8c3f3e76474766b77ec7c03885dbb9.r2.dev/huong-dan/video-basic-pro-1790400280.mp4"></video>
+                </div>
+            </div>
+
+            <!-- 5 STEP DETAILED WALKTHROUGH -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200/80 space-y-5">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-black text-slate-950">📖 5 Bước Cài Đặt Kích Hoạt Chi Tiết</h2>
+                    <p class="text-xs sm:text-sm text-slate-500 mt-1">Làm theo đúng thứ tự 5 bước dưới đây:</p>
+                </div>
+
+                <div class="space-y-3.5">
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-black text-sm flex items-center justify-center shrink-0">1</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Bấm "Tải Cấu Hình DNS Ngay" trên Safari</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Khi iPhone hỏi <em>"Trang web này đang cố gắng tải về một hồ sơ cấu hình"</em> &rarr; Bấm <strong class="text-emerald-600">Cho phép (Allow)</strong> &rarr; Bấm <strong>Đóng</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-black text-sm flex items-center justify-center shrink-0">2</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Cài Đặt Hồ Sơ Trong Cài Đặt iPhone</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Mở <strong>Cài đặt (Settings)</strong> &rarr; Bấm <strong>"Đã tải về hồ sơ"</strong> &rarr; Bấm <strong>Cài đặt</strong> góc trên bên phải &rarr; Nhập mật mã mở khóa màn hình.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-black text-sm flex items-center justify-center shrink-0">3</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Vào Cài Đặt Tin Cậy Chứng Nhận</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Vào <strong>Cài đặt &rarr; Cài đặt chung (General) &rarr; Giới thiệu (About)</strong> &rarr; Cuộn xuống dưới cùng chọn <strong>"Cài đặt tin cậy chứng nhận" (Certificate Trust Settings)</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 font-black text-sm flex items-center justify-center shrink-0">4</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-slate-900">Bật Xanh Công Tắc Chứng Chỉ "Locket Gold Root CA"</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Tại mục <em>"Bật toàn bộ tin cậy cho các chứng chỉ gốc"</em> &rarr; Gạt <strong class="text-emerald-600">BẬT XANH</strong> dòng <strong class="text-amber-600">"Locket Gold Root CA"</strong> &rarr; Chọn <strong>Tiếp tục (Continue)</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-xl bg-emerald-600 text-white font-black text-sm flex items-center justify-center shrink-0">5</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-emerald-950">Vuốt Tắt Hẳn App Locket & Mở Lại</h4>
+                            <p class="text-xs text-emerald-900 mt-0.5">Vuốt đa nhiệm tắt hẳn Locket rồi mở lại. Huy hiệu <strong>Locket Gold</strong>, quay video 30s/90s, bộ khung & caption tiếng Việt sẽ lập tức kích hoạt!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        let activeDnsUrl = '';
+        let activeProfileUser = {
+            username: 'hippobbie',
+            token: '84cab5d42402',
+            uid: 's67ynkAoScRAUR5tHFQr4IJPE512'
+        };
+        let locketSession = null;
+        let selectedMediaFile = null;
+        let selectedCaptionStyle = 'gold_crown';
+        let cloudStatus = {
+            cf_url: 'https://expansion-tired-galleries-syndrome.trycloudflare.com',
+            bore_endpoint: '159.223.110.159:37045',
+            tunnel_online: false
+        };
+
+        const FIREBASE_API_KEY = 'AIzaSyCQngaaXQIfJaH0aS2l7REgIjD7nL431So';
+        const CA_DER_B64 = 'MIIDejCCAmKgAwIBAgIJAPs4V/Q5JaaQMA0GCSqGSIb3DQEBCwUAMEoxCzAJBgNVBAYTAlVTMR0wGwYDVQQKDBRMb2NrZXQgR29sZCBVbmxvY2tlcjEcMBoGA1UEAwwTTG9ja2V0IEdvbGQgUm9vdCBDQTAeFw0yNjEwMTkwNjU4MDJaFw0zNjEwMTYwNjU4MDJaMEoxCzAJBgNVBAYTAlVTMR0wGwYDVQQKDBRMb2NrZXQgR29sZCBVbmxvY2tlcjEcMBoGA1UEAwwTTG9ja2V0IEdvbGQgUm9vdCBDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKDRQdnLjyznevdF+p8czU7BiK+V3AlNV0kdijJ1guFtAWR8H4Gp/n9bYDReYgG1T1wULP/Ycin6jmEJgyHj7+Sdf+aWbdbSH9sJ88eNUSKBkQj7pM1FEzmtpn2sYYRBlpHyPq+DSN7F1SIxQjLxkcn/o2R4TBub/yAGie8t0wUiplU3ERVPdOXXxp4zyVCUgsNqlPpPbu9bWvAPj/esglBfXsoxGs+RVWSpRBIZCu1qUh/M42+pfiHMBnbtEHV2b3UPp9nrMG0jQfgILSGeBNYen1zp/kbQrn1yDExPL/JYTJrvUxLrDT2F6eTHE4mM64MrlcIWrM5VPr3jZ1gliW0CAwEAAaNjMGEwHQYDVR0OBBYEFAYsC40T2bhGa93UwuIsCKQJpuolMB8GA1UdIwQYMBaAFAYsC40T2bhGa93UwuIsCKQJpuolMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgGGMA0GCSqGSIb3DQEBCwUAA4IBAQASWfR8qZg2r0cWCQZ3BAKz05QQyU4s3mkb5VRWSDjCzwZjB6vzSZpa0uBzHK78iqDsBO5B6nYLGW/KByf9JTASLVUv5biOCiuJ8feFyLIijbmQo2ZrUFCxc9W9fl66VC5CuCTLwMxzVqLPe0TppTSHTjhIKJAtvOKyn4z8AmRKuaYZmQ4jWUH+VTp6RLmWnXe3Q0XshC/sDuBUA4TIYKq/7XlPGHWKqGE0EILXOQ8honADNhMTM8DWBrFbgqOU5b0l/xWZuilmEHnXc2yO9d1/74DTbxgSlpC6OtwOg1wQR1xN4hA1mLUu3kdnJRBTMZ0TaoEqTMWcF8QRHfLXal81';
+
+        const KNOWN_USERS_DB = {
+            "hippobbie": {
+                uid: "s67ynkAoScRAUR5tHFQr4IJPE512",
+                username: "hippobbie",
+                full_name: "hippobbie",
+                avatar: "https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2Fs67ynkAoScRAUR5tHFQr4IJPE512%2Fpublic%2Fprofile_pic.webp?alt=media&token=2c030d08-bf8a-4c9b-b3a3-5bab49ccb7db",
+                token: "84cab5d42402"
+            },
+            "dinhvy0801": {
+                uid: "qgWecCLxMHgNmDvkehh11EKdKND2",
+                username: "dinhvy0801",
+                full_name: "Đinh Vy",
+                avatar: "https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2FqgWecCLxMHgNmDvkehh11EKdKND2%2Fpublic%2Fprofile_pic.webp?alt=media&token=7718ebe7-4f61-403a-a7d1-730743b5910d",
+                token: "78b9fc654327"
+            },
+            "tranqvinh": {
+                uid: "y3QGZ0JdHUR6PE14gf2KOlApA7f2",
+                username: "tranqvinh",
+                full_name: "Vinh Trần",
+                avatar: "https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2Fy3QGZ0JdHUR6PE14gf2KOlApA7f2%2Fpublic%2Fprofile_pic.webp?alt=media&token=a83c50b5-dce9-4d22-b30d-921547f5aaa6",
+                token: "tranqvinhvip"
+            },
+            "oanh_oanh03": {
+                uid: "5MDwHXPw0FSnIZf68mtFSKYtZEK2",
+                username: "oanh_oanh03",
+                full_name: "oanh_oanh03",
+                avatar: "https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2F5MDwHXPw0FSnIZf68mtFSKYtZEK2%2Fpublic%2Fprofile_pic.webp?alt=media&token=6cd3d239-eaf3-445f-b14d-a9cd0c87cbb7",
+                token: "a621c6d7cbc1"
+            },
+            "dangtramy2006": {
+                uid: "s7nbs4TbL8NyhUzHwGjpRr9gt1I2",
+                username: "dangtramy2006",
+                full_name: "dangtramy2006",
+                avatar: "https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2Fs7nbs4TbL8NyhUzHwGjpRr9gt1I2%2Fpublic%2Fprofile_pic.webp?alt=media&token=2d2e42e7-be2d-49f8-8bd3-c99b6064a7f7",
+                token: "d59044be1503"
+            }
+        };
+
+        const STYLE_PREVIEW_MAP = {
+            gold_crown: { bg: 'linear-gradient(135deg, #FFD700, #F59E0B)', color: '#111827', icon: '👑 ', colors: ['#FFD700', '#F59E0B'], textColor: '#111827E6', emoji: '👑', id: 'caption:gold_vip', type: 'standard' },
+            standard: { bg: 'rgba(0,0,0,0.6)', color: '#FFFFFF', icon: '', colors: [], textColor: '#FFFFFFE6', emoji: '', id: 'caption:standard', type: 'standard' },
+            heart_pink: { bg: 'linear-gradient(135deg, #FF758C, #FF7EB3)', color: '#FFFFFF', icon: '💖 ', colors: ['#FF758C', '#FF7EB3'], textColor: '#FFFFFFE6', emoji: '💖', id: 'caption:heart_pink', type: 'standard' },
+            fire_gold: { bg: 'linear-gradient(135deg, #FF416C, #FF4B2B)', color: '#FFFFFF', icon: '🔥 ', colors: ['#FF416C', '#FF4B2B'], textColor: '#FFFFFFE6', emoji: '🔥', id: 'caption:fire_gold', type: 'standard' },
+            galaxy_purple: { bg: 'linear-gradient(135deg, #7F00FF, #E100FF)', color: '#FFFFFF', icon: '✨ ', colors: ['#7F00FF', '#E100FF'], textColor: '#FFFFFFE6', emoji: '✨', id: 'caption:galaxy', type: 'standard' },
+            ocean_blue: { bg: 'linear-gradient(135deg, #00C6FF, #0072FF)', color: '#FFFFFF', icon: '🌊 ', colors: ['#00C6FF', '#0072FF'], textColor: '#FFFFFFE6', emoji: '🌊', id: 'caption:ocean', type: 'standard' },
+            dark_luxury: { bg: 'linear-gradient(135deg, #0F172A, #1E293B)', color: '#FBBF24', icon: '💎 ', colors: ['#0F172A', '#1E293B'], textColor: '#FBBF24E6', emoji: '💎', id: 'caption:dark_luxury', type: 'standard' },
+            time: { bg: 'rgba(0,0,0,0.65)', color: '#34D399', icon: '🕒 ', colors: [], textColor: '#FFFFFFE6', emoji: '🕒', id: 'caption:time', type: 'time' }
+        };
+
+        function decodeJwtPayload(jwt) {
+            try {
+                const p = (jwt || '').split('.')[1];
+                if (!p) return {};
+                const b64 = p.replace(/-/g, '+').replace(/_/g, '/');
+                return JSON.parse(decodeURIComponent(escape(atob(b64))));
+            } catch (e) {
+                return {};
+            }
+        }
+
+        function normalizePhoneE164JS(raw) {
+            let s = (raw || '').replace(/[\s\-\(\)\.]/g, '');
+            if (s.startsWith('0') && (s.length === 10 || s.length === 11)) return '+84' + s.slice(1);
+            if (s.startsWith('84') && (s.length === 11 || s.length === 12)) return '+' + s;
+            if (!s.startsWith('+') && /^\d+$/.test(s)) return '+' + s;
+            return s;
+        }
+
+        async function refreshLocketTokenDirect(refreshToken) {
+            const res = await fetch(`https://securetoken.googleapis.com/v1/token?key=${FIREBASE_API_KEY}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ grant_type: 'refresh_token', refresh_token: refreshToken })
+            });
+            const data = await res.json();
+            if (res.ok && data.id_token) {
+                return {
+                    ok: true,
+                    id_token: data.id_token,
+                    refresh_token: data.refresh_token || refreshToken,
+                    uid: data.user_id || decodeJwtPayload(data.id_token).user_id || ''
+                };
+            }
+            return { ok: false, error: (data.error && data.error.message) || 'Refresh token hết hạn' };
+        }
+
+        async function locketLoginDirect({ identifier = '', password = '', refresh_token = '', id_token = '' }) {
+            let uid = '';
+            let finalIdToken = '';
+            let finalRefreshToken = '';
+            let emailOut = '';
+
+            if (refresh_token && !identifier) {
+                const ref = await refreshLocketTokenDirect(refresh_token);
+                if (!ref.ok) return ref;
+                finalIdToken = ref.id_token;
+                finalRefreshToken = ref.refresh_token;
+                uid = ref.uid;
+            } else if (id_token && !identifier) {
+                const claims = decodeJwtPayload(id_token);
+                uid = claims.user_id || claims.sub || '';
+                if (!uid) return { ok: false, error: 'ID Token không hợp lệ!' };
+                finalIdToken = id_token;
+                finalRefreshToken = refresh_token;
+            } else {
+                const ident = (identifier || '').trim();
+                if (!ident || !password) {
+                    return { ok: false, error: 'Vui lòng nhập Email / Số điện thoại và Mật khẩu Locket!' };
+                }
+                if (ident.includes('@')) {
+                    const r = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email: ident, password: password, returnSecureToken: true })
+                    });
+                    const d = await r.json();
+                    if (!r.ok || !d.idToken) {
+                        let msg = (d.error && d.error.message) || 'Đăng nhập thất bại';
+                        if (msg.includes('INVALID_PASSWORD') || msg.includes('INVALID_LOGIN_CREDENTIALS')) {
+                            msg = 'Sai mật khẩu Locket! Vui lòng kiểm tra lại.';
+                        } else if (msg.includes('EMAIL_NOT_FOUND')) {
+                            msg = 'Không tìm thấy tài khoản với Email này (hãy thử đăng nhập bằng Số điện thoại).';
+                        }
+                        return { ok: false, error: msg };
+                    }
+                    finalIdToken = d.idToken;
+                    finalRefreshToken = d.refreshToken || '';
+                    uid = d.localId || '';
+                    emailOut = d.email || ident;
+                } else {
+                    const phoneE164 = normalizePhoneE164JS(ident);
+                    const r1 = await fetch('https://api.locketcamera.com/signInWithPhonePassword', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ data: { phone: phoneE164, password: password } })
+                    });
+                    const d1 = await r1.json();
+                    const customTok = d1 && d1.result && d1.result.token;
+                    if (!r1.ok || !customTok) {
+                        return { ok: false, error: `Sai số điện thoại (${phoneE164}) hoặc mật khẩu Locket!` };
+                    }
+                    const r2 = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithCustomToken?key=${FIREBASE_API_KEY}`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ token: customTok, returnSecureToken: true })
+                    });
+                    const d2 = await r2.json();
+                    if (!r2.ok || !d2.idToken) {
+                        return { ok: false, error: 'Không thể đổi Custom Token sang ID Token Firebase.' };
+                    }
+                    finalIdToken = d2.idToken;
+                    finalRefreshToken = d2.refreshToken || '';
+                    uid = d2.localId || decodeJwtPayload(finalIdToken).user_id || '';
+                }
+            }
+
+            let username = emailOut ? emailOut.split('@')[0] : uid.slice(0, 8);
+            let fullName = username;
+            let avatar = `https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2F${uid}%2Fpublic%2Fprofile_pic.webp?alt=media`;
+
+            try {
+                const fr = await fetch('https://api.locketcamera.com/fetchUserV2', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${finalIdToken}`
+                    },
+                    body: JSON.stringify({ data: { user_uid: uid } })
+                });
+                const fd = await fr.json();
+                const uData = fd && fd.result && fd.result.data;
+                if (uData) {
+                    username = uData.username || username;
+                    const fn = `${uData.first_name || ''} ${uData.last_name || ''}`.trim();
+                    fullName = fn || fullName;
+                    avatar = uData.profile_picture_url || avatar;
+                }
+            } catch (e) {}
+
+            return {
+                ok: true,
+                uid,
+                username,
+                full_name: fullName,
+                avatar,
+                id_token: finalIdToken,
+                refresh_token: finalRefreshToken
+            };
+        }
+
+        function buildMomentOverlaysJS(caption, styleKey) {
+            let cap = (caption || '').trim();
+            if (!cap && styleKey !== 'time') return [];
+            const st = STYLE_PREVIEW_MAP[styleKey] || STYLE_PREVIEW_MAP.standard;
+            if (!cap && styleKey === 'time') {
+                cap = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+            }
+            const dataObj = {
+                text: cap,
+                text_color: st.textColor,
+                type: st.type,
+                max_lines: 4,
+                background: {
+                    colors: st.colors,
+                    material_blur: 'ultra_thin'
+                },
+                payload: {}
+            };
+            if (st.emoji) {
+                dataObj.icon = { type: 'emoji', data: st.emoji };
+            }
+            return [{
+                overlay_id: st.id,
+                overlay_type: 'caption',
+                alt_text: cap,
+                data: dataObj
+            }];
+        }
+
+        function buildMobileconfigXml(username, token) {
+            const displayTag = username || token || 'VIP';
+            const dohUrl = `${cloudStatus.cf_url.replace(/\/$/, '')}/dns-query/${token || 'vip'}`;
+            return `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadDisplayName</key>
+    <string>Locket Gold VIP (${displayTag})</string>
+    <key>PayloadDescription</key>
+    <string>Cau hinh Locket Gold VIP (Vinh vien 2099) - @${displayTag}</string>
+    <key>PayloadIdentifier</key>
+    <string>com.locketgold.profile</string>
+    <key>PayloadOrganization</key>
+    <string>Locket Gold VIP</string>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>9ddc879a-abb8-4bdb-9984-c53a273581e8</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.security.root</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.locketgold.rootca</string>
+            <key>PayloadUUID</key>
+            <string>bb0640e5-040b-4ecc-9f5c-53157883582a</string>
+            <key>PayloadDisplayName</key>
+            <string>Locket Gold Root CA</string>
+            <key>PayloadDescription</key>
+            <string>Chung chi goc Locket Gold Root CA</string>
+            <key>PayloadContent</key>
+            <data>${CA_DER_B64}</data>
+        </dict>
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.dnsSettings.managed</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.locketgold.dns</string>
+            <key>PayloadUUID</key>
+            <string>2504b094-3aad-4998-a308-a23e7db9ffa4</string>
+            <key>PayloadDisplayName</key>
+            <string>Locket Gold VIP DNS</string>
+            <key>PayloadDescription</key>
+            <string>DNS-over-HTTPS Locket Gold VIP</string>
+            <key>DNSSettings</key>
+            <dict>
+                <key>DNSProtocol</key>
+                <string>HTTPS</string>
+                <key>ServerURL</key>
+                <string>${dohUrl}</string>
+                <key>SupplementalMatchDomains</key>
+                <array>
+                    <string>api.revenuecat.com</string>
+                    <string>firebaseremoteconfig.googleapis.com</string>
+                </array>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>`;
+        }
+
+        function buildMobileconfigDataUri(username, token, uid = '') {
+            if (!window.location.hostname.includes('github.io')) {
+                return `/locket_gold.mobileconfig?token=${encodeURIComponent(token || '')}&uid=${encodeURIComponent(uid || '')}&username=${encodeURIComponent(username || '')}`;
+            }
+            if (cloudStatus.tunnel_online && cloudStatus.cf_url) {
+                return `${cloudStatus.cf_url.replace(/\/$/, '')}/locket_gold.mobileconfig?token=${encodeURIComponent(token || '')}&uid=${encodeURIComponent(uid || '')}&username=${encodeURIComponent(username || '')}`;
+            }
+            const xml = buildMobileconfigXml(username, token);
+            const blob = new Blob([xml], { type: 'application/x-apple-aspen-config' });
+            return URL.createObjectURL(blob);
+        }
+
+        function downloadDnsProfile(username, token, uid, ev) {
+            if (ev) ev.preventDefault();
+            const cleanUser = (username || 'VIP').replace(/[^A-Za-z0-9_.-]/g, '');
+            const isGhPages = window.location.hostname.includes('github.io');
+
+            // 1. If on local/tunnel server directly, or live Cloudflare tunnel is online -> serve CMS-Signed .mobileconfig
+            if (!isGhPages) {
+                window.location.href = `/locket_gold.mobileconfig?token=${encodeURIComponent(token || '')}&uid=${encodeURIComponent(uid || '')}&username=${encodeURIComponent(username || '')}`;
+                return false;
+            }
+            if (cloudStatus.tunnel_online && cloudStatus.cf_url) {
+                window.location.href = `${cloudStatus.cf_url.replace(/\/$/, '')}/locket_gold.mobileconfig?token=${encodeURIComponent(token || '')}&uid=${encodeURIComponent(uid || '')}&username=${encodeURIComponent(username || '')}`;
+                return false;
+            }
+
+            // 2. 100% Serverless Offline Fallback -> trigger instant Blob download (never blocked unlike data: URIs)
+            const xml = buildMobileconfigXml(username, token);
+            const blob = new Blob([xml], { type: 'application/x-apple-aspen-config' });
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = blobUrl;
+            a.download = `LocketGold_${cleanUser}.mobileconfig`;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                a.remove();
+                URL.revokeObjectURL(blobUrl);
+            }, 5000);
+            return false;
+        }
+
+        function downloadActiveDnsProfile(ev) {
+            return downloadDnsProfile(
+                activeProfileUser.username,
+                activeProfileUser.token,
+                activeProfileUser.uid,
+                ev
+            );
+        }
+
+        function toggleTokenLoginMode() {
+            const box = document.getElementById('tokenLoginInputs');
+            if (box) box.classList.toggle('hidden');
+        }
+
+        function setUploaderSessionUI(sess) {
+            locketSession = sess;
+            try {
+                if (sess) {
+                    localStorage.setItem('locket_web_session', JSON.stringify(sess));
+                } else {
+                    localStorage.removeItem('locket_web_session');
+                }
+            } catch (e) {}
+
+            const loginSec = document.getElementById('uploaderLoginSection');
+            const badge = document.getElementById('uploaderUserBadge');
+            const av = document.getElementById('uploaderAvatar');
+            const nm = document.getElementById('uploaderName');
+
+            if (sess && sess.id_token && sess.uid) {
+                loginSec?.classList.add('hidden');
+                badge?.classList.remove('hidden');
+                badge?.classList.add('flex');
+                if (av) {
+                    av.src = sess.avatar || `https://ui-avatars.com/api/?name=${encodeURIComponent(sess.username || 'L')}&background=f59e0b&color=000`;
+                }
+                if (nm) {
+                    nm.textContent = `${sess.full_name || sess.username} (@${sess.username})`;
+                }
+            } else {
+                loginSec?.classList.remove('hidden');
+                badge?.classList.add('hidden');
+                badge?.classList.remove('flex');
+            }
+        }
+
+        function logoutLocketUploader() {
+            setUploaderSessionUI(null);
+        }
+
+        async function restoreLocketSession() {
+            try {
+                const raw = localStorage.getItem('locket_web_session');
+                if (!raw) return;
+                const saved = JSON.parse(raw);
+                if (!saved || (!saved.refresh_token && !saved.id_token)) return;
+                setUploaderSessionUI(saved);
+                if (saved.refresh_token) {
+                    const data = await refreshLocketTokenDirect(saved.refresh_token);
+                    if (data && data.ok && data.id_token) {
+                        setUploaderSessionUI({
+                            ...saved,
+                            id_token: data.id_token,
+                            refresh_token: data.refresh_token || saved.refresh_token,
+                            uid: data.uid || saved.uid
+                        });
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        async function loginLocketForUpload() {
+            const idVal = (document.getElementById('locketLoginId')?.value || '').trim();
+            const passVal = document.getElementById('locketLoginPass')?.value || '';
+            const msgBox = document.getElementById('loginStatusMsg');
+            const btn = document.getElementById('btnLocketLogin');
+
+            if (!idVal || !passVal) {
+                if (msgBox) {
+                    msgBox.className = 'mt-3 p-3 rounded-xl text-xs font-semibold bg-rose-500/20 border border-rose-500/40 text-rose-200';
+                    msgBox.textContent = '❌ Vui lòng nhập đầy đủ Email / Số điện thoại và Mật khẩu Locket!';
+                    msgBox.classList.remove('hidden');
+                }
+                return;
+            }
+
+            if (btn) btn.textContent = '⏳ Đang xác thực...';
+            if (msgBox) {
+                msgBox.className = 'mt-3 p-3 rounded-xl text-xs font-semibold bg-amber-500/20 border border-amber-500/40 text-amber-200';
+                msgBox.textContent = '🔍 Đang kết nối trực tiếp máy chủ xác thực Locket...';
+                msgBox.classList.remove('hidden');
+            }
+
+            try {
+                let data = await locketLoginDirect({ identifier: idVal, password: passVal });
+                if (!data || !data.ok) {
+                    try {
+                        const res = await fetch('/api/locket/login', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ identifier: idVal, password: passVal })
+                        });
+                        if (res.ok) data = await res.json();
+                    } catch (e2) {}
+                }
+                if (btn) btn.textContent = '🔓 Kết Nối Tài Khoản';
+
+                if (data && data.ok && data.id_token) {
+                    msgBox?.classList.add('hidden');
+                    setUploaderSessionUI(data);
+                    loadServerAndUsers();
+                } else {
+                    if (msgBox) {
+                        msgBox.className = 'mt-3 p-3 rounded-xl text-xs font-semibold bg-rose-500/20 border border-rose-500/40 text-rose-200';
+                        msgBox.textContent = '❌ ' + ((data && data.error) || 'Đăng nhập thất bại!');
+                    }
+                }
+            } catch (e) {
+                if (btn) btn.textContent = '🔓 Kết Nối Tài Khoản';
+                if (msgBox) {
+                    msgBox.className = 'mt-3 p-3 rounded-xl text-xs font-semibold bg-rose-500/20 border border-rose-500/40 text-rose-200';
+                    msgBox.textContent = '❌ Lỗi kết nối: ' + e.message;
+                }
+            }
+        }
+
+        async function loginLocketWithToken() {
+            const tokVal = (document.getElementById('locketRefreshTokenInput')?.value || '').trim();
+            const msgBox = document.getElementById('loginStatusMsg');
+            if (!tokVal) return;
+
+            const payload = tokVal.startsWith('eyJ') ? { id_token: tokVal } : { refresh_token: tokVal };
+            try {
+                const data = await locketLoginDirect(payload);
+                if (data && data.ok && data.id_token) {
+                    msgBox?.classList.add('hidden');
+                    setUploaderSessionUI(data);
+                } else if (msgBox) {
+                    msgBox.className = 'mt-3 p-3 rounded-xl text-xs font-semibold bg-rose-500/20 border border-rose-500/40 text-rose-200';
+                    msgBox.textContent = '❌ ' + ((data && data.error) || 'Token không hợp lệ!');
+                    msgBox.classList.remove('hidden');
+                }
+            } catch (e) {}
+        }
+
+        function selectCaptionStyle(styleKey) {
+            selectedCaptionStyle = styleKey;
+            document.querySelectorAll('.style-btn').forEach(btn => {
+                if (btn.getAttribute('data-style') === styleKey) {
+                    btn.classList.add('ring-2', 'ring-white', 'opacity-100');
+                    btn.classList.remove('opacity-75');
+                } else {
+                    btn.classList.remove('ring-2', 'ring-white', 'opacity-100');
+                    btn.classList.add('opacity-75');
+                }
+            });
+            updateLiveCaptionPreview();
+        }
+
+        function updateLiveCaptionPreview() {
+            const capVal = (document.getElementById('momentCaptionInput')?.value || '').trim();
+            const wrap = document.getElementById('liveCaptionPreviewWrap');
+            const pill = document.getElementById('liveCaptionPill');
+            if (!wrap || !pill) return;
+
+            if (!capVal && selectedCaptionStyle !== 'time') {
+                wrap.classList.add('hidden');
+                return;
+            }
+            const st = STYLE_PREVIEW_MAP[selectedCaptionStyle] || STYLE_PREVIEW_MAP.standard;
+            const nowStr = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+            const displayTxt = capVal || nowStr;
+            pill.style.background = st.bg;
+            pill.style.color = st.color;
+            pill.textContent = st.icon + displayTxt;
+            wrap.classList.remove('hidden');
+        }
+
+        function togglePreviewVideoAudio() {
+            const vidEl = document.getElementById('momentPreviewVideo');
+            const btn = document.getElementById('btnTogglePreviewMute');
+            if (!vidEl) return;
+            vidEl.muted = !vidEl.muted;
+            if (!vidEl.muted) {
+                vidEl.volume = 1.0;
+                vidEl.play().catch(() => {});
+            }
+            if (btn) {
+                btn.textContent = vidEl.muted ? '🔇 Bấm bật tiếng' : '🔊 Đang bật tiếng';
+            }
+        }
+
+        function readAscii4(u8, off) {
+            return String.fromCharCode(u8[off], u8[off + 1], u8[off + 2], u8[off + 3]);
+        }
+
+        function readU32BE(u8, off) {
+            return ((u8[off] << 24) | (u8[off + 1] << 16) | (u8[off + 2] << 8) | u8[off + 3]) >>> 0;
+        }
+
+        function writeU32BE(u8, off, val) {
+            u8[off] = (val >>> 24) & 0xff;
+            u8[off + 1] = (val >>> 16) & 0xff;
+            u8[off + 2] = (val >>> 8) & 0xff;
+            u8[off + 3] = val & 0xff;
+        }
+
+        function parseSubBoxesJS(u8, start = 0, end = u8.byteLength) {
+            const out = [];
+            let pos = start;
+            while (pos + 8 <= end) {
+                let sz = readU32BE(u8, pos);
+                const type = readAscii4(u8, pos + 4);
+                let hdr = 8;
+                if (sz === 1) {
+                    if (pos + 16 > end) break;
+                    const hi = readU32BE(u8, pos + 8);
+                    const lo = readU32BE(u8, pos + 12);
+                    sz = hi * 4294967296 + lo;
+                    hdr = 16;
+                } else if (sz === 0) {
+                    sz = end - pos;
+                }
+                if (sz < hdr || pos + sz > end) break;
+                out.push({ type, start: pos, payloadStart: pos + hdr, end: pos + sz, size: sz });
+                pos += sz;
+            }
+            return out;
+        }
+
+        function concatUint8Arrays(arrays) {
+            let total = 0;
+            for (const a of arrays) total += a.byteLength;
+            const out = new Uint8Array(total);
+            let off = 0;
+            for (const a of arrays) {
+                out.set(a, off);
+                off += a.byteLength;
+            }
+            return out;
+        }
+
+        function makeMp4BoxJS(typeStr, payloadU8) {
+            const out = new Uint8Array(8 + payloadU8.byteLength);
+            writeU32BE(out, 0, out.byteLength);
+            for (let i = 0; i < 4; i++) out[4 + i] = typeStr.charCodeAt(i);
+            out.set(payloadU8, 8);
+            return out;
+        }
+
+        function findEsdsBoxJS(u8) {
+            for (let i = 4; i + 8 <= u8.byteLength; i++) {
+                if (u8[i] === 0x65 && u8[i + 1] === 0x73 && u8[i + 2] === 0x64 && u8[i + 3] === 0x73) { // 'esds'
+                    const sz = readU32BE(u8, i - 4);
+                    if (sz >= 12 && (i - 4 + sz) <= u8.byteLength) {
+                        return u8.subarray(i - 4, i - 4 + sz);
+                    }
+                }
+            }
+            return null;
+        }
+
+        async function remuxVideoForLocketAudioJS(file) {
+            try {
+                // 1. Zero-copy scan top-level atoms
+                const topBoxes = [];
+                let pos = 0;
+                const total = file.size;
+                let ftypBrand = '';
+                while (pos + 8 <= total) {
+                    const hdrBuf = await file.slice(pos, Math.min(pos + 32, total)).arrayBuffer();
+                    const u8 = new Uint8Array(hdrBuf);
+                    let sz = readU32BE(u8, 0);
+                    const type = readAscii4(u8, 4);
+                    let hdr = 8;
+                    if (sz === 1) {
+                        if (u8.byteLength < 16) break;
+                        sz = readU32BE(u8, 8) * 4294967296 + readU32BE(u8, 12);
+                        hdr = 16;
+                    } else if (sz === 0) {
+                        sz = total - pos;
+                    }
+                    if (type === 'ftyp' && u8.byteLength >= 12) {
+                        ftypBrand = readAscii4(u8, 8);
+                    }
+                    if (sz < hdr || pos + sz > total) break;
+                    topBoxes.push({ type, offset: pos, hdrSize: hdr, size: sz, end: pos + sz });
+                    pos += sz;
+                }
+
+                const moovBox = topBoxes.find(b => b.type === 'moov');
+                const mdatBoxes = topBoxes.filter(b => b.type === 'mdat');
+                if (!moovBox || mdatBoxes.length === 0) {
+                    const isMov = ftypBrand === 'qt  ' || /\.mov$/i.test(file.name);
+                    return {
+                        blob: file,
+                        ext: isMov ? 'mov' : 'mp4',
+                        contentType: isMov ? 'video/quicktime' : 'video/mp4',
+                        hasAudio: true,
+                        remuxed: false
+                    };
+                }
+
+                const firstMdat = mdatBoxes[0];
+                const lastMdat = mdatBoxes[mdatBoxes.length - 1];
+                // Ensure moov is not sandwiched between multiple mdat boxes
+                if (moovBox.offset > firstMdat.offset && moovBox.end < lastMdat.end) {
+                    const isMov = ftypBrand === 'qt  ';
+                    return {
+                        blob: file,
+                        ext: isMov ? 'mov' : 'mp4',
+                        contentType: isMov ? 'video/quicktime' : 'video/mp4',
+                        hasAudio: true,
+                        remuxed: false
+                    };
+                }
+
+                const moovRaw = new Uint8Array(await file.slice(moovBox.offset, moovBox.end).arrayBuffer());
+                const moovChildren = parseSubBoxesJS(moovRaw, moovBox.hdrSize, moovRaw.byteLength);
+
+                // Inspect all trak boxes to find video and audio tracks
+                const traksInfo = [];
+                for (const ch of moovChildren) {
+                    if (ch.type !== 'trak') continue;
+                    const trakSlice = moovRaw.subarray(ch.start, ch.end);
+                    let handlerType = '';
+                    let sampleEntryType = '';
+                    let hasEsds = false;
+                    const tChildren = parseSubBoxesJS(moovRaw, ch.payloadStart, ch.end);
+                    for (const tc of tChildren) {
+                        if (tc.type === 'mdia') {
+                            const mChildren = parseSubBoxesJS(moovRaw, tc.payloadStart, tc.end);
+                            for (const mc of mChildren) {
+                                if (mc.type === 'hdlr' && (mc.end - mc.payloadStart) >= 12) {
+                                    handlerType = readAscii4(moovRaw, mc.payloadStart + 8);
+                                } else if (mc.type === 'minf') {
+                                    const minfChildren = parseSubBoxesJS(moovRaw, mc.payloadStart, mc.end);
+                                    for (const mic of minfChildren) {
+                                        if (mic.type === 'stbl') {
+                                            const stblChildren = parseSubBoxesJS(moovRaw, mic.payloadStart, mic.end);
+                                            for (const stc of stblChildren) {
+                                                if (stc.type === 'stsd' && (stc.end - stc.payloadStart) >= 16) {
+                                                    sampleEntryType = readAscii4(moovRaw, stc.payloadStart + 12);
+                                                    const stsdEntries = moovRaw.subarray(stc.payloadStart + 8, stc.end);
+                                                    if (findEsdsBoxJS(stsdEntries)) hasEsds = true;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    traksInfo.push({ box: ch, handlerType, sampleEntryType, hasEsds, trakSlice });
+                }
+
+                const videoTraks = traksInfo.filter(t => t.handlerType === 'vide');
+                const soundTraks = traksInfo.filter(t => t.handlerType === 'soun');
+                const hasMp4aAudio = soundTraks.some(t => t.sampleEntryType === 'mp4a' && t.hasEsds);
+
+                // Choose primary video track + best audio track (prefer mp4a with esds over apac spatial audio)
+                const selectedTraks = [];
+                if (videoTraks.length > 0) selectedTraks.push(videoTraks[0]);
+                if (soundTraks.length > 0) {
+                    const bestAudio = soundTraks.find(t => t.sampleEntryType === 'mp4a' && t.hasEsds)
+                        || soundTraks.find(t => t.sampleEntryType === 'mp4a')
+                        || soundTraks[0];
+                    selectedTraks.push(bestAudio);
+                }
+
+                // If audio track is non-AAC (e.g., lpcm/alac without esds in QuickTime .mov), keep QuickTime container + faststart
+                const canConvertToIsoMp4 = (soundTraks.length === 0) || hasMp4aAudio;
+
+                function convertStsdBox(stsdPayload) {
+                    const header8 = stsdPayload.subarray(0, 8);
+                    const entries = parseSubBoxesJS(stsdPayload, 8, stsdPayload.byteLength);
+                    const outEntries = [];
+                    for (const ent of entries) {
+                        const ep = stsdPayload.subarray(ent.payloadStart, ent.end);
+                        if (ent.type === 'mp4a' && ep.byteLength >= 28) {
+                            const ver = (ep[8] << 8) | ep[9];
+                            if (ver === 1 || ver === 2) {
+                                const esds = findEsdsBoxJS(ep);
+                                if (esds) {
+                                    const newEp = new Uint8Array(28 + esds.byteLength);
+                                    newEp.set(ep.subarray(0, 8), 0); // reserved(6) + data_ref_index(2)
+                                    // version(2)=0, revision(2)=0, vendor(4)=0 -> bytes 8..15 are 0
+                                    if (ver === 1) {
+                                        newEp.set(ep.subarray(16, 20), 16); // channels(2) + samplesize(2)
+                                        newEp.set(ep.subarray(24, 28), 24); // samplerate(4)
+                                    } else if (ver === 2 && ep.byteLength >= 44) {
+                                        const dv = new DataView(ep.buffer, ep.byteOffset, ep.byteLength);
+                                        const sr = Math.round(dv.getFloat64(32, false)) || 44100;
+                                        const ch = Math.min(2, Math.max(1, dv.getUint32(40, false) || 2));
+                                        newEp[16] = 0; newEp[17] = ch;
+                                        newEp[18] = 0; newEp[19] = 16;
+                                        writeU32BE(newEp, 24, (sr << 16) >>> 0);
+                                    }
+                                    newEp.set(esds, 28);
+                                    outEntries.push(makeMp4BoxJS('mp4a', newEp));
+                                    continue;
+                                }
+                            }
+                        }
+                        outEntries.push(stsdPayload.subarray(ent.start, ent.end));
+                    }
+                    return makeMp4BoxJS('stsd', concatUint8Arrays([header8, ...outEntries]));
+                }
+
+                function rebuildTrakBox(trakInfo, newTrackId) {
+                    const chs = parseSubBoxesJS(moovRaw, trakInfo.box.payloadStart, trakInfo.box.end);
+                    const outCh = [];
+                    const isAudio = trakInfo.handlerType === 'soun';
+                    for (const c of chs) {
+                        if (c.type === 'tref' || c.type === 'tapt' || c.type === 'meta') continue;
+                        if (c.type === 'tkhd') {
+                            const tk = new Uint8Array(moovRaw.subarray(c.payloadStart, c.end));
+                            tk[1] = 0; tk[2] = 0; tk[3] = 3; // TrackEnabled | TrackInMovie
+                            const idOff = tk[0] === 1 ? 20 : 12;
+                            if (tk.byteLength >= idOff + 4) writeU32BE(tk, idOff, newTrackId);
+                            if (isAudio) {
+                                const volOff = tk[0] === 1 ? 48 : 36;
+                                if (tk.byteLength >= volOff + 2) {
+                                    tk[volOff] = 1; tk[volOff + 1] = 0; // volume = 1.0 (0x0100)
+                                }
+                            }
+                            outCh.push(makeMp4BoxJS('tkhd', tk));
+                        } else if (c.type === 'mdia') {
+                            const mChs = parseSubBoxesJS(moovRaw, c.payloadStart, c.end);
+                            const mOut = [];
+                            for (const mc of mChs) {
+                                if (mc.type === 'hdlr' && canConvertToIsoMp4) {
+                                    const hd = new Uint8Array(moovRaw.subarray(mc.payloadStart, mc.end));
+                                    if (hd.byteLength >= 24) {
+                                        hd.fill(0, 4, 8);   // pre_defined = 0
+                                        hd.fill(0, 12, 24); // reserved = 0
+                                        const label = new Uint8Array([67, 111, 114, 101, 32, 77, 101, 100, 105, 97, 0]); // "Core Media\0"
+                                        const cleanHd = new Uint8Array(24 + label.byteLength);
+                                        cleanHd.set(hd.subarray(0, 24), 0);
+                                        cleanHd.set(label, 24);
+                                        mOut.push(makeMp4BoxJS('hdlr', cleanHd));
+                                    } else {
+                                        mOut.push(moovRaw.subarray(mc.start, mc.end));
+                                    }
+                                } else if (mc.type === 'minf') {
+                                    const minfChs = parseSubBoxesJS(moovRaw, mc.payloadStart, mc.end);
+                                    const minfOut = [];
+                                    for (const mic of minfChs) {
+                                        if (mic.type === 'hdlr' && canConvertToIsoMp4) continue;
+                                        if (mic.type === 'dinf' && canConvertToIsoMp4) {
+                                            const dinfBytes = new Uint8Array(moovRaw.subarray(mic.payloadStart, mic.end));
+                                            // Replace 'alis' (0x61,0x6c,0x69,0x73) with 'url ' (0x75,0x72,0x6c,0x20)
+                                            for (let k = 0; k + 8 <= dinfBytes.byteLength; k++) {
+                                                if (dinfBytes[k] === 0x61 && dinfBytes[k+1] === 0x6c && dinfBytes[k+2] === 0x69 && dinfBytes[k+3] === 0x73) {
+                                                    dinfBytes[k] = 0x75; dinfBytes[k+1] = 0x72; dinfBytes[k+2] = 0x6c; dinfBytes[k+3] = 0x20;
+                                                }
+                                            }
+                                            minfOut.push(makeMp4BoxJS('dinf', dinfBytes));
+                                        } else if (mic.type === 'stbl') {
+                                            const stblChs = parseSubBoxesJS(moovRaw, mic.payloadStart, mic.end);
+                                            const stblOut = [];
+                                            for (const stc of stblChs) {
+                                                if (stc.type === 'stsd' && canConvertToIsoMp4) {
+                                                    stblOut.push(convertStsdBox(moovRaw.subarray(stc.payloadStart, stc.end)));
+                                                } else if (stc.type === 'cslg' && canConvertToIsoMp4) {
+                                                    continue;
+                                                } else {
+                                                    stblOut.push(moovRaw.subarray(stc.start, stc.end));
+                                                }
+                                            }
+                                            minfOut.push(makeMp4BoxJS('stbl', concatUint8Arrays(stblOut)));
+                                        } else {
+                                            minfOut.push(moovRaw.subarray(mic.start, mic.end));
+                                        }
+                                    }
+                                    mOut.push(makeMp4BoxJS('minf', concatUint8Arrays(minfOut)));
+                                } else {
+                                    mOut.push(moovRaw.subarray(mc.start, mc.end));
+                                }
+                            }
+                            outCh.push(makeMp4BoxJS('mdia', concatUint8Arrays(mOut)));
+                        } else {
+                            outCh.push(moovRaw.subarray(c.start, c.end));
+                        }
+                    }
+                    return makeMp4BoxJS('trak', concatUint8Arrays(outCh));
+                }
+
+                const newMoovParts = [];
+                for (const ch of moovChildren) {
+                    if (ch.type === 'mvhd') {
+                        const mv = new Uint8Array(moovRaw.subarray(ch.payloadStart, ch.end));
+                        if (mv.byteLength >= 4) {
+                            writeU32BE(mv, mv.byteLength - 4, selectedTraks.length + 1);
+                        }
+                        newMoovParts.push(makeMp4BoxJS('mvhd', mv));
+                    }
+                }
+                selectedTraks.forEach((tInfo, idx) => {
+                    newMoovParts.push(rebuildTrakBox(tInfo, idx + 1));
+                });
+
+                const newMoov = makeMp4BoxJS('moov', concatUint8Arrays(newMoovParts));
+                const newFtypPayload = canConvertToIsoMp4
+                    ? new Uint8Array([
+                        0x6d,0x70,0x34,0x32, 0x00,0x00,0x00,0x01, // mp42, v1
+                        0x69,0x73,0x6f,0x6d, 0x6d,0x70,0x34,0x31, 0x6d,0x70,0x34,0x32 // isom, mp41, mp42
+                    ])
+                    : new Uint8Array([
+                        0x71,0x74,0x20,0x20, 0x00,0x00,0x00,0x00, 0x71,0x74,0x20,0x20 // qt  
+                    ]);
+                const newFtyp = makeMp4BoxJS('ftyp', newFtypPayload);
+
+                const oldMdatOffset = firstMdat.offset;
+                const newMdatOffset = newFtyp.byteLength + newMoov.byteLength;
+                const delta = newMdatOffset - oldMdatOffset;
+
+                function patchChunkOffsets(buf, start = 8, end = buf.byteLength) {
+                    const boxes = parseSubBoxesJS(buf, start, end);
+                    for (const b of boxes) {
+                        if (b.type === 'moov' || b.type === 'trak' || b.type === 'mdia' || b.type === 'minf' || b.type === 'stbl') {
+                            patchChunkOffsets(buf, b.payloadStart, b.end);
+                        } else if (b.type === 'stco') {
+                            const cnt = readU32BE(buf, b.payloadStart + 4);
+                            for (let i = 0; i < cnt; i++) {
+                                const off = b.payloadStart + 8 + i * 4;
+                                if (off + 4 <= b.end) {
+                                    const oldVal = readU32BE(buf, off);
+                                    writeU32BE(buf, off, (oldVal + delta) >>> 0);
+                                }
+                            }
+                        } else if (b.type === 'co64') {
+                            const cnt = readU32BE(buf, b.payloadStart + 4);
+                            for (let i = 0; i < cnt; i++) {
+                                const off = b.payloadStart + 8 + i * 8;
+                                if (off + 8 <= b.end) {
+                                    const hi = readU32BE(buf, off);
+                                    const lo = readU32BE(buf, off + 4);
+                                    const nextVal = hi * 4294967296 + lo + delta;
+                                    writeU32BE(buf, off, Math.floor(nextVal / 4294967296) >>> 0);
+                                    writeU32BE(buf, off + 4, (nextVal >>> 0));
+                                }
+                            }
+                        }
+                    }
+                }
+
+                patchChunkOffsets(newMoov, 8, newMoov.byteLength);
+
+                const finalMime = canConvertToIsoMp4 ? 'video/mp4' : 'video/quicktime';
+                const finalExt = canConvertToIsoMp4 ? 'mp4' : 'mov';
+                const remuxedBlob = new Blob(
+                    [newFtyp, newMoov, file.slice(firstMdat.offset, lastMdat.end)],
+                    { type: finalMime }
+                );
+
+                return {
+                    blob: remuxedBlob,
+                    ext: finalExt,
+                    contentType: finalMime,
+                    hasAudio: soundTraks.length > 0,
+                    audioCodec: soundTraks[0]?.sampleEntryType || 'none',
+                    remuxed: true
+                };
+            } catch (err) {
+                console.warn('Video remux fallback:', err);
+                const isMov = /\.mov$/i.test(file.name) || file.type === 'video/quicktime';
+                return {
+                    blob: file,
+                    ext: isMov ? 'mov' : 'mp4',
+                    contentType: isMov ? 'video/quicktime' : 'video/mp4',
+                    hasAudio: true,
+                    remuxed: false
+                };
+            }
+        }
+
+        async function handleMomentFileSelected(ev) {
+            const file = ev.target.files && ev.target.files[0];
+            if (!file) return;
+            selectedMediaFile = file;
+
+            const vidEl = document.getElementById('momentPreviewVideo');
+            const imgEl = document.getElementById('momentPreviewImg');
+            const emptyEl = document.getElementById('momentEmptyPlaceholder');
+            const infoBadge = document.getElementById('mediaInfoBadge');
+            const audioBadge = document.getElementById('audioStatusBadge');
+            const muteBtn = document.getElementById('btnTogglePreviewMute');
+            const objUrl = URL.createObjectURL(file);
+            const sizeMb = (file.size / (1024 * 1024)).toFixed(2);
+
+            emptyEl?.classList.add('hidden');
+            if (file.type.startsWith('video/') || /\.(mp4|mov|m4v|webm)$/i.test(file.name)) {
+                imgEl?.classList.add('hidden');
+                if (vidEl) {
+                    vidEl.src = objUrl;
+                    vidEl.muted = false;
+                    vidEl.volume = 1.0;
+                    vidEl.classList.remove('hidden');
+                    vidEl.currentTime = 0.1;
+                    vidEl.play().then(() => {
+                        if (muteBtn) {
+                            muteBtn.textContent = '🔊 Đang bật tiếng';
+                            muteBtn.classList.remove('hidden');
+                        }
+                    }).catch(() => {
+                        vidEl.muted = true;
+                        vidEl.play().catch(() => {});
+                        if (muteBtn) {
+                            muteBtn.textContent = '🔇 Bấm bật tiếng';
+                            muteBtn.classList.remove('hidden');
+                        }
+                    });
+                    vidEl.onloadedmetadata = () => {
+                        const dur = vidEl.duration ? vidEl.duration.toFixed(1) + 's' : 'Video';
+                        if (infoBadge) {
+                            infoBadge.textContent = `📹 Video: ${dur} • Dung lượng: ${sizeMb} MB (✅ Đã vượt qua giới hạn 10s / 15MB)`;
+                            infoBadge.classList.remove('hidden');
+                        }
+                    };
+                }
+                if (audioBadge) {
+                    audioBadge.textContent = '🔄 Đang kiểm tra & chuẩn hóa luồng âm thanh Locket...';
+                    audioBadge.classList.remove('hidden');
+                    const inspectRes = await remuxVideoForLocketAudioJS(file);
+                    if (!inspectRes.hasAudio) {
+                        audioBadge.className = 'mt-1.5 px-3.5 py-1.5 rounded-xl bg-rose-500/20 border border-rose-500/40 text-rose-200 text-[11px] font-bold text-center';
+                        audioBadge.textContent = '⚠️ Video gốc này không có luồng âm thanh (Video câm/Tắt mic)!';
+                    } else {
+                        audioBadge.className = 'mt-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-500/15 border border-emerald-400/40 text-emerald-200 text-[11px] font-bold text-center';
+                        audioBadge.textContent = '🔊 Đã chuẩn hóa AAC FastStart — 100% bạn bè (kể cả không có Gold) đều nghe được tiếng!';
+                    }
+                }
+            } else {
+                vidEl?.classList.add('hidden');
+                muteBtn?.classList.add('hidden');
+                audioBadge?.classList.add('hidden');
+                if (imgEl) {
+                    imgEl.src = objUrl;
+                    imgEl.classList.remove('hidden');
+                }
+                if (infoBadge) {
+                    infoBadge.textContent = `🖼️ Ảnh: ${sizeMb} MB (✅ Chất lượng gốc)`;
+                    infoBadge.classList.remove('hidden');
+                }
+            }
+            updateLiveCaptionPreview();
+        }
+
+        async function extractSquareThumbnailBlob(file) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 1020;
+            canvas.height = 1020;
+            const ctx = canvas.getContext('2d');
+
+            const createFallbackBlob = () => new Promise(resolve => {
+                const grad = ctx.createLinearGradient(0, 0, 1020, 1020);
+                grad.addColorStop(0, '#1e293b');
+                grad.addColorStop(1, '#0f172a');
+                ctx.fillStyle = grad;
+                ctx.fillRect(0, 0, 1020, 1020);
+                canvas.toBlob(b => resolve(b), 'image/jpeg', 0.85);
+            });
+
+            if (file.type.startsWith('image/') || /\.(jpg|jpeg|png|webp|heic)$/i.test(file.name)) {
+                const imgEl = document.getElementById('momentPreviewImg');
+                if (imgEl && imgEl.naturalWidth > 0) {
+                    const s = Math.min(imgEl.naturalWidth, imgEl.naturalHeight);
+                    const sx = (imgEl.naturalWidth - s) / 2;
+                    const sy = (imgEl.naturalHeight - s) / 2;
+                    ctx.drawImage(imgEl, sx, sy, s, s, 0, 0, 1020, 1020);
+                    return new Promise(resolve => canvas.toBlob(b => resolve(b), 'image/jpeg', 0.88));
+                }
+                return createFallbackBlob();
+            }
+
+            const vidEl = document.getElementById('momentPreviewVideo');
+            if (vidEl && vidEl.videoWidth > 0 && vidEl.videoHeight > 0) {
+                try {
+                    const s = Math.min(vidEl.videoWidth, vidEl.videoHeight);
+                    const sx = (vidEl.videoWidth - s) / 2;
+                    const sy = (vidEl.videoHeight - s) / 2;
+                    ctx.drawImage(vidEl, sx, sy, s, s, 0, 0, 1020, 1020);
+                    const blob = await new Promise(resolve => canvas.toBlob(b => resolve(b), 'image/jpeg', 0.85));
+                    if (blob && blob.size > 1000) return blob;
+                } catch (e) {}
+            }
+            return createFallbackBlob();
+        }
+
+        function uploadBlobToFirebaseStorage(bucket, objectName, blob, contentType, idToken, onProgress) {
+            return new Promise((resolve, reject) => {
+                const encodedName = encodeURIComponent(objectName);
+                const directUrl = `https://firebasestorage.googleapis.com/v0/b/${bucket}/o?uploadType=media&name=${encodedName}`;
+
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', directUrl, true);
+                xhr.setRequestHeader('Authorization', `Bearer ${idToken}`);
+                xhr.setRequestHeader('Content-Type', contentType);
+
+                if (xhr.upload && typeof onProgress === 'function') {
+                    xhr.upload.onprogress = (ev) => {
+                        if (ev.lengthComputable) {
+                            onProgress(Math.round((ev.loaded / ev.total) * 100), ev.loaded, ev.total);
+                        }
+                    };
+                }
+
+                xhr.onload = () => {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        try {
+                            const meta = JSON.parse(xhr.responseText);
+                            const dlToken = (meta.downloadTokens || '').split(',')[0];
+                            let dlUrl = `https://firebasestorage.googleapis.com/v0/b/${bucket}/o/${encodedName}?alt=media`;
+                            if (dlToken) dlUrl += `&token=${dlToken}`;
+                            resolve(dlUrl);
+                            return;
+                        } catch (e) {}
+                    }
+                    // Fallback to server proxy
+                    uploadViaServerFallback(bucket, objectName, blob, contentType, idToken, onProgress)
+                        .then(resolve)
+                        .catch(reject);
+                };
+
+                xhr.onerror = () => {
+                    uploadViaServerFallback(bucket, objectName, blob, contentType, idToken, onProgress)
+                        .then(resolve)
+                        .catch(reject);
+                };
+
+                xhr.send(blob);
+            });
+        }
+
+        function uploadViaServerFallback(bucket, objectName, blob, contentType, idToken, onProgress) {
+            return new Promise((resolve, reject) => {
+                const url = `/api/locket/upload-storage?bucket=${encodeURIComponent(bucket)}&name=${encodeURIComponent(objectName)}`;
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', url, true);
+                xhr.setRequestHeader('X-Locket-Token', idToken);
+                xhr.setRequestHeader('X-Upload-Content-Type', contentType);
+                xhr.setRequestHeader('Content-Type', 'application/octet-stream');
+
+                if (xhr.upload && typeof onProgress === 'function') {
+                    xhr.upload.onprogress = (ev) => {
+                        if (ev.lengthComputable) {
+                            onProgress(Math.round((ev.loaded / ev.total) * 100), ev.loaded, ev.total);
+                        }
+                    };
+                }
+                xhr.onload = () => {
+                    try {
+                        const data = JSON.parse(xhr.responseText);
+                        if (data && data.ok && data.download_url) {
+                            resolve(data.download_url);
+                        } else {
+                            reject(new Error((data && data.error) || `Upload lỗi HTTP ${xhr.status}`));
+                        }
+                    } catch (e) {
+                        reject(new Error(`Upload lỗi HTTP ${xhr.status}`));
+                    }
+                };
+                xhr.onerror = () => reject(new Error('Lỗi kết nối mạng khi tải file lên'));
+                xhr.send(blob);
+            });
+        }
+
+        async function uploadAndPostMoment() {
+            const resBox = document.getElementById('uploadResultBox');
+            const progWrap = document.getElementById('uploadProgressWrap');
+            const progBar = document.getElementById('uploadProgressBar');
+            const progLbl = document.getElementById('uploadProgressLabel');
+            const progPct = document.getElementById('uploadProgressPct');
+            const btn = document.getElementById('btnPostMoment');
+
+            if (!locketSession || !locketSession.id_token || !locketSession.uid) {
+                if (resBox) {
+                    resBox.className = 'p-3.5 rounded-xl text-xs font-bold bg-rose-500/20 border border-rose-500/40 text-rose-200';
+                    resBox.textContent = '⚠️ Vui lòng đăng nhập tài khoản Locket ở Bước 1 phía trên trước khi đăng video!';
+                    resBox.classList.remove('hidden');
+                }
+                document.getElementById('locketLoginId')?.focus();
+                return;
+            }
+
+            if (!selectedMediaFile) {
+                if (resBox) {
+                    resBox.className = 'p-3.5 rounded-xl text-xs font-bold bg-amber-500/20 border border-amber-500/40 text-amber-200';
+                    resBox.textContent = '📂 Vui lòng chọn một Video hoặc Ảnh từ thư viện trước!';
+                    resBox.classList.remove('hidden');
+                }
+                document.getElementById('momentFileInput')?.click();
+                return;
+            }
+
+            resBox?.classList.add('hidden');
+            progWrap?.classList.remove('hidden');
+            if (btn) btn.disabled = true;
+
+            try {
+                // 1. Refresh token directly via Google SecureToken API
+                if (locketSession.refresh_token) {
+                    if (progLbl) progLbl.textContent = '🔄 Đang làm mới phiên bảo mật Locket...';
+                    const refData = await refreshLocketTokenDirect(locketSession.refresh_token);
+                    if (refData && refData.ok && refData.id_token) {
+                        locketSession.id_token = refData.id_token;
+                        setUploaderSessionUI(locketSession);
+                    }
+                }
+
+                const uid = locketSession.uid;
+                const idToken = locketSession.id_token;
+                const momentKey = `${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+                const isVideo = selectedMediaFile.type.startsWith('video/') || /\.(mp4|mov|m4v|webm)$/i.test(selectedMediaFile.name);
+
+                // 2. Extract and upload thumbnail to gs://locket-img
+                if (progLbl) progLbl.textContent = '🖼️ Đang tạo & tải ảnh bìa (Thumbnail 1020x1020)...';
+                if (progBar) progBar.style.width = '10%';
+                if (progPct) progPct.textContent = '10%';
+
+                const thumbBlob = await extractSquareThumbnailBlob(selectedMediaFile);
+                const thumbPath = `users/${uid}/moments/thumbnails/${momentKey}.jpg`;
+                const thumbnailUrl = await uploadBlobToFirebaseStorage(
+                    'locket-img',
+                    thumbPath,
+                    thumbBlob,
+                    'image/jpeg',
+                    idToken,
+                    (pct) => {
+                        const mapped = Math.round(pct * 0.2);
+                        if (progBar) progBar.style.width = `${mapped}%`;
+                        if (progPct) progPct.textContent = `${mapped}%`;
+                    }
+                );
+
+                // 3. If video, normalize audio/container (ISO MP4 AAC v0 + FastStart) & upload to gs://locket-video
+                let videoUrl = '';
+                if (isVideo) {
+                    if (progLbl) progLbl.textContent = '🔊 Đang chuẩn hóa luồng âm thanh AAC FastStart (để mọi người đều nghe được tiếng)...';
+                    const normVid = await remuxVideoForLocketAudioJS(selectedMediaFile);
+                    const uploadBlob = normVid.blob || selectedMediaFile;
+                    const uploadExt = normVid.ext || 'mp4';
+                    const uploadMime = normVid.contentType || 'video/mp4';
+                    const videoPath = `users/${uid}/moments/videos/${momentKey}.${uploadExt}`;
+                    const totalMb = (uploadBlob.size / (1024 * 1024)).toFixed(1);
+                    videoUrl = await uploadBlobToFirebaseStorage(
+                        'locket-video',
+                        videoPath,
+                        uploadBlob,
+                        uploadMime,
+                        idToken,
+                        (pct, loaded) => {
+                            const mapped = 20 + Math.round(pct * 0.7);
+                            const loadedMb = (loaded / (1024 * 1024)).toFixed(1);
+                            if (progLbl) progLbl.textContent = `🚀 Đang tải Video có tiếng lên Locket Cloud (${loadedMb}MB / ${totalMb}MB)...`;
+                            if (progBar) progBar.style.width = `${mapped}%`;
+                            if (progPct) progPct.textContent = `${mapped}%`;
+                        }
+                    );
+                }
+
+                // 4. Call postMomentV2 directly (serverless 24/7)
+                if (progLbl) progLbl.textContent = '✨ Đang xuất bản Locket tới bạn bè (postMomentV2)...';
+                if (progBar) progBar.style.width = '95%';
+                if (progPct) progPct.textContent = '95%';
+
+                const captionVal = (document.getElementById('momentCaptionInput')?.value || '').trim();
+                const overlays = buildMomentOverlaysJS(captionVal, selectedCaptionStyle);
+                const momentData = {
+                    thumbnail_url: thumbnailUrl,
+                    md5: `${momentKey}_md5`,
+                    recipients: [],
+                    sent_to_all: true,
+                    sent_to_self_only: false,
+                    show_personally: false,
+                    analytics: {
+                        platform: 'ios',
+                        is_video_long: true
+                    }
+                };
+                if (videoUrl) momentData.video_url = videoUrl;
+                if (captionVal) momentData.caption = captionVal;
+                if (overlays.length > 0) momentData.overlays = overlays;
+
+                const directPostRes = await fetch('https://api.locketcamera.com/postMomentV2', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${idToken}`
+                    },
+                    body: JSON.stringify({ data: momentData })
+                });
+
+                if (directPostRes.ok) {
+                    if (progBar) progBar.style.width = '100%';
+                    if (progPct) progPct.textContent = '100%';
+                    if (progLbl) progLbl.textContent = '✅ Hoàn tất 100%!';
+                    if (resBox) {
+                        resBox.className = 'p-4 rounded-xl text-xs font-extrabold bg-emerald-500/20 border border-emerald-400 text-emerald-200';
+                        resBox.innerHTML = `🎉 ĐÃ ĐĂNG ${isVideo ? 'VIDEO' : 'ẢNH'} LÊN LOCKET THÀNH CÔNG! Mở app Locket trên iPhone để xem ngay!`;
+                        resBox.classList.remove('hidden');
+                    }
+                } else {
+                    const errTxt = await directPostRes.text();
+                    throw new Error(`Locket API HTTP ${directPostRes.status}: ${errTxt}`);
+                }
+            } catch (err) {
+                if (resBox) {
+                    resBox.className = 'p-4 rounded-xl text-xs font-bold bg-rose-500/20 border border-rose-500/40 text-rose-200';
+                    resBox.textContent = '❌ Lỗi khi đăng: ' + err.message;
+                    resBox.classList.remove('hidden');
+                }
+            } finally {
+                if (btn) btn.disabled = false;
+            }
+        }
+
+        function loadSavedUsersFromStorage() {
+            try {
+                const raw = localStorage.getItem('locket_activated_users_db');
+                if (!raw) return;
+                const parsed = JSON.parse(raw);
+                if (parsed && typeof parsed === 'object') {
+                    Object.keys(parsed).forEach(k => {
+                        if (parsed[k] && parsed[k].uid && parsed[k].username) {
+                            KNOWN_USERS_DB[k.toLowerCase()] = parsed[k];
+                        }
+                    });
+                }
+            } catch (e) {}
+        }
+
+        function saveUserToAllStores(uObj, syncRemote = true) {
+            if (!uObj || !uObj.uid || !uObj.username) return;
+            const key = uObj.username.toLowerCase();
+            const existing = KNOWN_USERS_DB[key] || {};
+            const merged = {
+                uid: uObj.uid,
+                username: uObj.username,
+                full_name: uObj.full_name || existing.full_name || uObj.username,
+                avatar: uObj.avatar || existing.avatar || `https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2F${uObj.uid}%2Fpublic%2Fprofile_pic.webp?alt=media`,
+                token: uObj.token || existing.token || uObj.uid.slice(0, 12).toLowerCase(),
+                updated_ms: Date.now()
+            };
+            KNOWN_USERS_DB[key] = merged;
+            try {
+                localStorage.setItem('locket_activated_users_db', JSON.stringify(KNOWN_USERS_DB));
+            } catch (e) {}
+
+            // Re-render both Quick Select pills & Activated Users list immediately
+            const isCloud = window.location.hostname.includes('github.io');
+            renderUsersList(getSortedUsersList(), isCloud);
+
+            // Sync in background to server DB so all devices receive the new user
+            if (syncRemote && cloudStatus.cf_url) {
+                fetchWithTimeout(`${cloudStatus.cf_url.replace(/\/$/, '')}/api/dns/generate`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url: uObj.username })
+                }, 4000).catch(() => {});
+            }
+        }
+
+        function getSortedUsersList() {
+            return Object.values(KNOWN_USERS_DB).sort((a, b) => (b.updated_ms || 0) - (a.updated_ms || 0));
+        }
+
+        async function loadServerAndUsers() {
+            loadSavedUsersFromStorage();
+            const pill = document.getElementById('serverIpLabel');
+            let isCloud = window.location.hostname.includes('github.io');
+
+            if (!isCloud) {
+                try {
+                    const res = await fetchWithTimeout('/api/users', {}, 3000);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (data && data.ok) {
+                            cloudStatus.cf_url = data.cf_url || cloudStatus.cf_url;
+                            cloudStatus.bore_endpoint = data.bore_endpoint || cloudStatus.bore_endpoint;
+                            cloudStatus.tunnel_online = true;
+                            if (Array.isArray(data.users)) {
+                                data.users.forEach(u => {
+                                    if (u && u.username) {
+                                        const k = u.username.toLowerCase();
+                                        KNOWN_USERS_DB[k] = { ...(KNOWN_USERS_DB[k] || {}), ...u };
+                                    }
+                                });
+                            }
+                            try {
+                                localStorage.setItem('locket_activated_users_db', JSON.stringify(KNOWN_USERS_DB));
+                            } catch (e) {}
+                            if (pill) pill.textContent = `Server Online (${data.bore_endpoint})`;
+                            renderUsersList(getSortedUsersList(), false);
+                            return;
+                        }
+                    }
+                } catch (e) {}
+            }
+
+            // Serverless 24/7 Cloud Mode (GitHub Pages): merge status.json + live tunnel /api/users + localStorage
+            try {
+                const stRes = await fetchWithTimeout('status.json?t=' + Date.now(), {}, 3500);
+                if (stRes.ok) {
+                    const st = await stRes.json();
+                    if (st.cf_url) cloudStatus.cf_url = st.cf_url;
+                    if (st.bore_endpoint) cloudStatus.bore_endpoint = st.bore_endpoint;
+                    if (Array.isArray(st.users)) {
+                        st.users.forEach(u => {
+                            if (u && u.username) {
+                                const k = u.username.toLowerCase();
+                                KNOWN_USERS_DB[k] = { ...(KNOWN_USERS_DB[k] || {}), ...u };
+                            }
+                        });
+                    }
+                }
+            } catch (e) {}
+
+            if (cloudStatus.cf_url) {
+                try {
+                    const r2 = await fetchWithTimeout(`${cloudStatus.cf_url.replace(/\/$/, '')}/api/users`, {}, 3500);
+                    if (r2.ok) {
+                        cloudStatus.tunnel_online = true;
+                        const d2 = await r2.json();
+                        if (d2 && d2.cf_url) cloudStatus.cf_url = d2.cf_url;
+                        if (d2 && Array.isArray(d2.users)) {
+                            d2.users.forEach(u => {
+                                if (u && u.username) {
+                                    const k = u.username.toLowerCase();
+                                    KNOWN_USERS_DB[k] = { ...(KNOWN_USERS_DB[k] || {}), ...u };
+                                }
+                            });
+                        }
+                    }
+                } catch (e) {}
+            }
+
+            try {
+                localStorage.setItem('locket_activated_users_db', JSON.stringify(KNOWN_USERS_DB));
+            } catch (e) {}
+
+            if (pill) pill.textContent = `Cloud 24/7 Online (${cloudStatus.bore_endpoint})`;
+            renderUsersList(getSortedUsersList(), true);
+        }
+
+        function renderUsersList(users, isCloudMode) {
+            // 1. Update Quick Select Bar at the top
+            const quickBar = document.getElementById('quickSelectUsersBar');
+            if (quickBar) {
+                const pillsHtml = users.map(u => {
+                    const label = (u.full_name && u.full_name.toLowerCase() !== u.username.toLowerCase())
+                        ? `@${u.username} (${u.full_name})`
+                        : `@${u.username}`;
+                    return `<button type="button" onclick="quickActivate('${u.username.replace(/'/g, "\\'")}')" class="px-3.5 py-1.5 rounded-xl bg-slate-950 text-amber-300 hover:bg-slate-800 text-xs font-extrabold shadow-sm transition-all cursor-pointer">👤 ${label}</button>`;
+                }).join('');
+                quickBar.innerHTML = `<span class="text-xs font-extrabold text-slate-900">⚡ Chọn nhanh (${users.length}):</span>` + pillsHtml;
+            }
+
+            // 2. Update Activated Users List at the bottom
+            const box = document.getElementById('activatedUsersList');
+            if (!box) return;
+            box.innerHTML = users.map(u => {
+                const safeUser = (u.username || '').replace(/'/g, "\\'");
+                const safeToken = (u.token || '').replace(/'/g, "\\'");
+                const safeUid = (u.uid || '').replace(/'/g, "\\'");
+                const dlUrl = (!isCloudMode)
+                    ? `/locket_gold.mobileconfig?token=${encodeURIComponent(u.token)}&uid=${encodeURIComponent(u.uid)}&username=${encodeURIComponent(u.username)}`
+                    : (cloudStatus.tunnel_online && cloudStatus.cf_url)
+                        ? `${cloudStatus.cf_url.replace(/\/$/, '')}/locket_gold.mobileconfig?token=${encodeURIComponent(u.token)}&uid=${encodeURIComponent(u.uid)}&username=${encodeURIComponent(u.username)}`
+                        : '#';
+                return `
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="flex items-center gap-3 min-w-0">
+                            <img src="${u.avatar || ''}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(u.username)}&background=f59e0b&color=000'" class="w-11 h-11 rounded-full object-cover border-2 border-amber-400 shrink-0">
+                            <div class="min-w-0">
+                                <div class="font-extrabold text-sm text-slate-900 truncate">${u.full_name || u.username} <span class="text-amber-600">@${u.username}</span></div>
+                                <div class="font-mono text-[11px] text-slate-500 truncate">UID: ${u.uid} • Token: ${u.token}</div>
+                                <span class="inline-block text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded mt-0.5">✅ Locket Gold Pro (Vĩnh viễn 2099)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 shrink-0">
+                            <a href="${dlUrl}" onclick="return downloadDnsProfile('${safeUser}', '${safeToken}', '${safeUid}', event)" class="px-4 py-2.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-amber-400 font-extrabold text-xs shadow-sm cursor-pointer">
+                                📥 Tải Cấu Hình DNS (@${u.username})
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function quickActivate(uname) {
+            const inp = document.getElementById('locketInput');
+            if (inp) {
+                inp.value = uname;
+                generateDnsForUser();
+            }
+        }
+
+        async function pasteFromClipboard() {
+            try {
+                const text = await navigator.clipboard.readText();
+                if (text) {
+                    const inp = document.getElementById('locketInput');
+                    if (inp) {
+                        inp.value = text.trim();
+                        generateDnsForUser();
+                    }
+                }
+            } catch (e) {
+                document.getElementById('locketInput')?.focus();
+            }
+        }
+
+        async function fetchWithTimeout(url, options = {}, timeoutMs = 4500) {
+            const ctrl = new AbortController();
+            const tid = setTimeout(() => ctrl.abort(), timeoutMs);
+            try {
+                return await fetch(url, { ...options, signal: ctrl.signal });
+            } finally {
+                clearTimeout(tid);
+            }
+        }
+
+        async function resolveLocketClientSide(rawVal) {
+            let clean = rawVal.trim().replace(/^@/, '');
+            if (clean.includes('locket.cam/')) {
+                const m = clean.match(/locket\.cam\/(?:u\/)?([^/?#&]+)/i);
+                if (m) clean = m[1].replace(/^@/, '');
+            }
+            const known = KNOWN_USERS_DB[clean.toLowerCase()];
+            if (known) {
+                return {
+                    ok: true,
+                    uid: known.uid,
+                    username: known.username,
+                    full_name: known.full_name || known.username,
+                    avatar: known.avatar,
+                    token: known.token,
+                    dns: { relative_url: buildMobileconfigDataUri(known.username, known.token) },
+                    is_cloud: true
+                };
+            }
+            if (/^[A-Za-z0-9]{28}$/.test(clean)) {
+                const tok = clean.slice(0, 12).toLowerCase();
+                return {
+                    ok: true,
+                    uid: clean,
+                    username: clean.slice(0, 10),
+                    full_name: clean.slice(0, 10),
+                    avatar: `https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2F${clean}%2Fpublic%2Fprofile_pic.webp?alt=media`,
+                    token: tok,
+                    dns: { relative_url: buildMobileconfigDataUri(clean.slice(0, 10), tok) },
+                    is_cloud: true
+                };
+            }
+            if (locketSession && locketSession.uid && (clean.toLowerCase() === (locketSession.username || '').toLowerCase() || clean === locketSession.uid)) {
+                const tok = locketSession.uid.slice(0, 12).toLowerCase();
+                return {
+                    ok: true,
+                    uid: locketSession.uid,
+                    username: locketSession.username,
+                    full_name: locketSession.full_name || locketSession.username,
+                    avatar: locketSession.avatar,
+                    token: tok,
+                    dns: { relative_url: buildMobileconfigDataUri(locketSession.username, tok) },
+                    is_cloud: true
+                };
+            }
+
+            // 1. Try active tunnel API if online (with fast 3s timeout)
+            if (cloudStatus.cf_url) {
+                try {
+                    const r = await fetchWithTimeout(`${cloudStatus.cf_url.replace(/\/$/, '')}/api/dns/generate`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ url: rawVal })
+                    }, 3500);
+                    if (r.ok) {
+                        const d = await r.json();
+                        if (d && d.ok && d.uid) {
+                            d.dns = { relative_url: buildMobileconfigDataUri(d.username, d.token) };
+                            d.is_cloud = true;
+                            KNOWN_USERS_DB[(d.username || clean).toLowerCase()] = d;
+                            return d;
+                        }
+                    }
+                } catch (e) {}
+            }
+
+            // 2. Serverless 24/7 Cloud Scrape via r.jina.ai (returns in ~400ms with CORS *)
+            const targetUrl = `https://locket.cam/${encodeURIComponent(clean)}`;
+            const endpoints = [
+                `https://r.jina.ai/${targetUrl}`,
+                `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`
+            ];
+            for (const pUrl of endpoints) {
+                try {
+                    const r = await fetchWithTimeout(pUrl, {}, 5000);
+                    if (!r.ok) continue;
+                    const rawTxt = await r.text();
+                    const mUser = rawTxt.match(/users(?:%2F|\/)([A-Za-z0-9]{28})(?:%2F|\/)/i)
+                        || rawTxt.match(/(?:%2F|\/)([A-Za-z0-9]{28})[0-9a-f]{16}/i);
+                    if (mUser) {
+                        const uid = mUser[1];
+                        const tok = uid.slice(0, 12).toLowerCase();
+                        const mImg = rawTxt.match(/(https:\/\/cdn2\.locketcamera\.com\/v0\/b\/locket-img\/o\/users[^\s)"'<>\\]+)/);
+                        const avatar = mImg
+                            ? mImg[1]
+                            : `https://cdn2.locketcamera.com/v0/b/locket-img/o/users%2F${uid}%2Fpublic%2Fprofile_pic.webp?alt=media`;
+                        const entry = {
+                            ok: true,
+                            uid,
+                            username: clean,
+                            full_name: clean,
+                            avatar,
+                            token: tok,
+                            dns: { relative_url: buildMobileconfigDataUri(clean, tok) },
+                            is_cloud: true
+                        };
+                        KNOWN_USERS_DB[clean.toLowerCase()] = entry;
+                        return entry;
+                    }
+                } catch (e) {}
+            }
+            return { ok: false, error: `Không tìm thấy UID cho '${rawVal}'. Hãy kiểm tra lại đúng username Locket!` };
+        }
+
+        async function generateDnsForUser() {
+            const input = document.getElementById('locketInput');
+            const urlVal = (input?.value || '').trim();
+            const statusBox = document.getElementById('genStatusBox');
+            const btnText = document.getElementById('btnGenDnsText');
+
+            if (!urlVal) {
+                alert('Vui lòng nhập Link hoặc Username Locket của bạn!');
+                input?.focus();
+                return;
+            }
+
+            if (btnText) btnText.textContent = '⏳ Đang giải mã UID...';
+            if (statusBox) {
+                statusBox.className = 'mt-3 p-3.5 rounded-xl text-xs bg-amber-50 border border-amber-300 text-amber-900';
+                statusBox.innerHTML = '🔍 Đang giải mã UID 28 ký tự và tạo cấu hình DNS Locket Gold 2099...';
+                statusBox.classList.remove('hidden');
+            }
+
+            try {
+                let data = null;
+                if (!window.location.hostname.includes('github.io')) {
+                    try {
+                        const res = await fetchWithTimeout('/api/dns/generate', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ url: urlVal })
+                        }, 3000);
+                        if (res.ok) data = await res.json();
+                    } catch (e) {}
+                }
+
+                if (!data || !data.ok) {
+                    data = await resolveLocketClientSide(urlVal);
+                }
+
+                if (data && data.ok && data.uid) {
+                    if (btnText) btnText.textContent = '✓ Đã Mở Khóa VIP!';
+                    activeProfileUser = {
+                        username: data.username || 'VIP',
+                        token: data.token || '',
+                        uid: data.uid || ''
+                    };
+                    const isGhPages = window.location.hostname.includes('github.io');
+                    const directSignedUrl = (!isGhPages)
+                        ? `/locket_gold.mobileconfig?token=${encodeURIComponent(data.token)}&uid=${encodeURIComponent(data.uid)}&username=${encodeURIComponent(data.username)}`
+                        : (cloudStatus.tunnel_online && cloudStatus.cf_url)
+                            ? `${cloudStatus.cf_url.replace(/\/$/, '')}/locket_gold.mobileconfig?token=${encodeURIComponent(data.token)}&uid=${encodeURIComponent(data.uid)}&username=${encodeURIComponent(data.username)}`
+                            : '#';
+                    activeDnsUrl = directSignedUrl !== '#' ? (directSignedUrl.startsWith('http') ? directSignedUrl : window.location.origin + directSignedUrl) : window.location.href;
+
+                    const mainBtn = document.getElementById('mainDnsDownloadBtn');
+                    const mainTxt = document.getElementById('mainDnsBtnText');
+                    if (mainBtn) {
+                        mainBtn.href = directSignedUrl;
+                        mainBtn.removeAttribute('download');
+                    }
+                    if (mainTxt) mainTxt.textContent = `📥 TẢI CẤU HÌNH DNS CHO @${data.username}`;
+
+                    document.getElementById('unlockedDownloadContainer')?.classList.remove('hidden');
+                    document.getElementById('lockedDownloadBadge')?.classList.add('hidden');
+
+                    const safeUser = (data.username || '').replace(/'/g, "\\'");
+                    const safeToken = (data.token || '').replace(/'/g, "\\'");
+                    const safeUid = (data.uid || '').replace(/'/g, "\\'");
+                    if (statusBox) {
+                        statusBox.className = 'mt-3 p-4 rounded-xl text-xs bg-emerald-50 border border-emerald-300 text-emerald-950 flex flex-col sm:flex-row items-center justify-between gap-3';
+                        statusBox.innerHTML = `
+                            <div class="flex items-center gap-3">
+                                <img src="${data.avatar || ''}" onerror="this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(data.username)}&background=f59e0b&color=000'" class="w-12 h-12 rounded-full object-cover border-2 border-emerald-500 shrink-0">
+                                <div>
+                                    <div class="font-extrabold text-sm text-emerald-950">✅ ${data.full_name} (@${data.username}) — Đã Kích Hoạt Gold 2099!</div>
+                                    <p class="text-[11px] text-emerald-800 font-mono">UID: <strong>${data.uid}</strong> • Token: <strong>${data.token}</strong></p>
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-2 shrink-0">
+                                <a href="${directSignedUrl}" onclick="return downloadDnsProfile('${safeUser}', '${safeToken}', '${safeUid}', event)" class="px-4 py-2.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-amber-400 font-extrabold text-xs shadow-sm cursor-pointer">
+                                    📥 Tải Cấu Hình DNS (@${data.username})
+                                </a>
+                            </div>
+                        `;
+                    }
+                    saveUserToAllStores(data, true);
+                    setTimeout(() => { if (btnText) btnText.textContent = '⚡ Kiểm Tra & Kích Hoạt VIP'; }, 2500);
+                } else {
+                    if (btnText) btnText.textContent = '⚡ Kiểm Tra & Kích Hoạt VIP';
+                    if (statusBox) {
+                        statusBox.className = 'mt-3 p-3.5 rounded-xl text-xs bg-rose-50 border border-rose-300 text-rose-900';
+                        statusBox.innerHTML = '❌ ' + ((data && data.error) || 'Không tìm thấy tài khoản Locket!');
+                    }
+                }
+            } catch (err) {
+                if (btnText) btnText.textContent = '⚡ Kiểm Tra & Kích Hoạt VIP';
+                if (statusBox) {
+                    statusBox.className = 'mt-3 p-3.5 rounded-xl text-xs bg-rose-50 border border-rose-300 text-rose-900';
+                    statusBox.innerHTML = '❌ Lỗi kết nối: ' + err.message;
+                }
+            }
+        }
+
+        function copyDnsUrl(btn) {
+            if (!activeDnsUrl) return;
+            navigator.clipboard.writeText(activeDnsUrl).then(() => {
+                const txt = document.getElementById('copyBtnTxt');
+                if (txt) txt.textContent = '✓ Đã chép!';
+                setTimeout(() => { if (txt) txt.textContent = '📋 Copy Link Tải Hồ Sơ'; }, 2000);
+            });
+        }
+
+        function togglePipVideo() {
+            const video = document.getElementById('guideVideoPlayer');
+            if (!video) return;
+            video.play();
+            if (typeof video.webkitSetPresentationMode === 'function') {
+                video.webkitSetPresentationMode('picture-in-picture');
+            } else if (document.pictureInPictureEnabled && typeof video.requestPictureInPicture === 'function') {
+                video.requestPictureInPicture();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            restoreLocketSession();
+            await loadServerAndUsers();
+            quickActivate('hippobbie');
+        });
+    </script>
+</body>
+</html>
